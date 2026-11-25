@@ -1,0 +1,19 @@
+{
+  "duration_seconds": 153.5,
+  "frames": 4605,
+  "animation_seconds": [
+    9.266666666666667,
+    21.666666666666668
+  ],
+  "copied_walkthrough_frames": 3436,
+  "checked_audio_sha256": "8f7aef0b9de9bfa85018ecccbf985673249d63b4be28a8604adbe5bcdbdef638",
+  "corrected_instruction": "Choose Review counter experiment.",
+  "encoded_lufs": "-16.03",
+  "encoded_true_peak_dbtp": "-2.78",
+  "music": {
+    "new_voice_end": 21.111395833333333,
+    "speech_end": 149.79616666666666,
+    "quietest_interior_music_second_dbfs": -53.51507568359375
+  },
+  "sha256": "e49334cea9d470c753936ae99151872392e6bff6709ae1125ecebe608d9c8e56"
+}

@@ -1,0 +1,7 @@
+accept	I		
+amount	I	3	0
+clk	I		
+initial_value	I	31	0
+load	I		
+remaining	O	31	0
+rst	I		

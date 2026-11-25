@@ -1,0 +1,44 @@
+{
+  "sha256": "3cef78005f3520149334e35dbe14f39e61bf26e55a14624d9883ae55f51e852f",
+  "seconds": 150.0,
+  "decoded_frames": 4500,
+  "audio_samples": 7200000,
+  "chapters": 10,
+  "encoded_lufs": "-16.04",
+  "encoded_dbtp": "-2.97",
+  "nonidentical_half_second_log_samples": 34,
+  "music": {
+    "music_quietest_interior_second_dbfs": -53.51507568359375,
+    "speech_end_seconds": 146.29616666666666,
+    "body_speed": 0.96,
+    "body_start": 0.75
+  },
+  "job": "counter32_250-20261118T193343Z-6fbe63d4",
+  "comparison_sha256": "fbbecf27617e244b31c94f948c43ebc95f4d9bf3dcfaa9a67f3129cf96e401ee",
+  "measured": {
+    "setup.worst_slack_ns": [
+      -0.633,
+      0.407
+    ],
+    "setup.failing_endpoints": [
+      32,
+      0
+    ],
+    "hold.failing_endpoints": [
+      0,
+      0
+    ],
+    "pulse.failing": [
+      0,
+      0
+    ],
+    "area.lut_sites": [
+      50,
+      41
+    ]
+  },
+  "pronunciation": {
+    "narration": "block designs and tickle scripts can add context",
+    "encoded_video": "block designs and tickle scripts can add context"
+  }
+}

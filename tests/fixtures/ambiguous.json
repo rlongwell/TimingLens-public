@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "time_unit": "ns",
+  "name": "Synthetic ambiguity regression",
+  "paths": [
+    {
+      "id": "P1",
+      "analysis": "setup",
+      "startpoint": "input",
+      "endpoint": "state_reg/D",
+      "slack_ns": -0.25
+    }
+  ]
+}

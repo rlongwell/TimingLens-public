@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 280 215"
+     preserveAspectRatio="xMidYMid meet"
+     version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events"
+     xml:space="preserve">
+<title>counter_view_imp</title>
+<desc>Nlview schematic (SVG)</desc>
+<clipPath id="clippingbbox">
+<rect x="0" y="0" width="280" height="215" />
+</clipPath>
+<g stroke="#102235"
+   stroke-width="1"
+   stroke-linecap="butt"
+   stroke-linejoin="miter"
+   stroke-miterlimit="4"
+   stroke-dasharray="none"
+   stroke-dashoffset="0"
+   fill="none"
+   font-family="Helvetica"
+   font-style="normal"
+   font-size="12"
+   writing-mode="lr-tb"
+   cursor="crosshair"
+   clip-path="url(#clippingbbox)">
+<path d="M0 0h280v216h-280z" stroke="none" fill="white" />
+<path d="M27 29h226l3 1l2 1l1 2l1 3v142l-1 3l-1 2l-2 1l-3 1h-226l-3 -1l-2 -1l-1 -2l-1 -3v-142l1 -3l1 -2l2 -1z" stroke="none" fill="#edf6fe" />
+<text x="140" y="27" fill="black" stroke-width="0" text-anchor="middle" dy="-1.6">counter_0</text>
+<text x="140" y="187" fill="#41619f" stroke-width="0" text-anchor="middle" dy="9.6">32-bit counter</text>
+<g stroke="black" stroke-width="3">
+<path d="M10 57h10" />
+<text x="22" y="57" fill="black" stroke-width="0" font-size="10" dy="3.66667">clk</text>
+<path d="M10 77h10" />
+<text x="22" y="77" fill="black" stroke-width="0" font-size="10" dy="3.66667">rst</text>
+<path d="M10 97h10" />
+<text x="22" y="97" fill="black" stroke-width="0" font-size="10" dy="3.66667">accept</text>
+<path d="M10 117h10" />
+<text x="22" y="117" fill="black" stroke-width="0" font-size="10" dy="3.66667">load</text>
+</g>
+<g stroke="black" stroke-width="5">
+<path d="M10 137h10" />
+<text x="22" y="137" fill="black" stroke-width="0" font-size="10" dy="3.66667">amount[3:0]</text>
+<path d="M10 157h10" />
+<text x="22" y="157" fill="black" stroke-width="0" font-size="10" dy="3.66667">initial_value[31:0]</text>
+<path d="M270 107h-10" />
+<text x="258" y="107" fill="black" stroke-width="0" font-size="10" text-anchor="end" dy="3.66667">remaining[31:0]</text>
+</g>
+<g stroke="#41619f">
+<path d="M27 29h226" />
+<path d="M253,29 A6.83537,6.83537 1.61957 0,1 260,36" />
+<path d="M260 36v142" />
+<path d="M260,178 A6.83537,6.83537 1.61957 0,1 253,185" />
+<path d="M253 185h-226" />
+<path d="M27,185 A6.83537,6.83537 1.61957 0,1 20,178" />
+<path d="M20 178v-142" />
+<path d="M20,36 A6.83537,6.83537 1.61957 0,1 27,29" />
+</g>
+</g>
+</svg>

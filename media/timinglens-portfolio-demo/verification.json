@@ -1,0 +1,14 @@
+{
+  "sha256": "5b5793e51eac1e2737976fcb77b97f4ac0dedb22ca63cdb00ea32bfba054da7d",
+  "video_frames": 3293,
+  "fps": 30,
+  "pixels": [
+    1920,
+    1080
+  ],
+  "audio_codec": "AAC",
+  "duration_seconds": 109.767,
+  "full_decode": "passed",
+  "minimum_source_audio_correlation_at_shot_midpoints": 0.981,
+  "maximum_audio_offset_ms_at_shot_midpoints": 0.0
+}

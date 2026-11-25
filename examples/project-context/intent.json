@@ -1,0 +1,27 @@
+{
+  "timinglens_intent": 1,
+  "stream_links": [
+    {
+      "source": "capture/M_AXIS",
+      "sink": "processing/S_AXIS",
+      "max_burst_beats": 256,
+      "buffer_capacity_beats": 16,
+      "reason": "Example only: acquisition cannot pause within a 256-beat burst. Replace with the actual traffic contract."
+    }
+  ],
+  "asynchronous_clocks": [
+    {
+      "source": "sensor_clk",
+      "destination": "fabric_clk",
+      "reason": "Example only: independent oscillators. Confirm the actual clock sources and all crossings."
+    }
+  ],
+  "multicycle_paths": [
+    {
+      "source": "launch_reg/C",
+      "destination": "capture_reg/D",
+      "cycles": 4,
+      "reason": "Example only: prove data stability and the four-cycle enable schedule before applying any exception."
+    }
+  ]
+}

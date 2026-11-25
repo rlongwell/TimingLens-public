@@ -1,0 +1,10 @@
+--- baseline/design.sv
++++ candidate/design.sv
+@@ -4,6 +4,6 @@
+ always_ff @(posedge clk) begin
+     if (rst) remaining <= 0;
+     else if (load) remaining <= initial_value;
+-    else if (accept && (remaining >= amount)) remaining <= remaining - amount;
++    else if (accept && (((|remaining[31:4]) || (remaining[3:0] >= amount)))) remaining <= remaining - amount;
+ end
+ endmodule

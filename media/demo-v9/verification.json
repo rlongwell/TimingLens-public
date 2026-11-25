@@ -1,0 +1,12 @@
+{
+  "seconds": 150,
+  "decoded_frames": 4500,
+  "verified_native_ports": 7,
+  "design_flow_start_frame": 545,
+  "identical_walkthrough_frames": 3640,
+  "identical_audio_packets_and_timestamps": true,
+  "identical_captions_and_chapters": true,
+  "audio_sha256": "3bb7e3cda45147f263ad39b0f48cdc4fd033ce6bce7fd369e6f614ffa3a9b6fb",
+  "source_sha256": "3cef78005f3520149334e35dbe14f39e61bf26e55a14624d9883ae55f51e852f",
+  "sha256": "dbd60a95777ce66056134689a66729dce6f6711c7bd7339525c32fed2ecfd088"
+}

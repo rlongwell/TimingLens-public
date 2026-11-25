@@ -1,0 +1,41 @@
+{
+  "file": "TimingLens-demo-PUNKD.mp4",
+  "sha256": "ee0aaf34822953e37f3e590131596c8ff43f6b8f8551bdfa1d7309d96b2e7a5a",
+  "duration_s": 265.067,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": "30/1",
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "audio_rate": "48000",
+  "channels": 2,
+  "caption_cues": 98,
+  "chapters": 12,
+  "full_decode": "passed without decoder errors",
+  "encoded_loudness": {
+    "input_i": "-16.03",
+    "input_tp": "-3.14",
+    "input_lra": "2.40",
+    "input_thresh": "-26.28",
+    "output_i": "-15.95",
+    "output_tp": "-2.60",
+    "output_lra": "2.50",
+    "output_thresh": "-26.17",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.05"
+  },
+  "continuous_music": true,
+  "review_frames_s": [
+    108,
+    112,
+    132,
+    188,
+    214,
+    257.1,
+    261,
+    264
+  ],
+  "review_method": "Encoded-frame inspection; full decode; word-timed ASR of narration; signal-level audio checks. No human subjective listening claim."
+}

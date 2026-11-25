@@ -1,0 +1,200 @@
+1
+00:00:00,400 --> 00:00:04,080
+This counter misses timing at 250 MHz.
+
+2
+00:00:04,780 --> 00:00:08,640
+The worst path arrives 633 ps late.
+
+3
+00:00:09,420 --> 00:00:12,712
+A signal takes time to travel through logic and
+wires.
+
+4
+00:00:13,295 --> 00:00:14,712
+That's propagation delay.
+
+5
+00:00:15,232 --> 00:00:18,774
+The counter needs its enable to settle before
+the next clock edge.
+
+6
+00:00:19,337 --> 00:00:20,858
+Here, it arrives too late.
+
+7
+00:00:21,780 --> 00:00:23,900
+Start with a Vivado project or checkpoint,
+
+8
+00:00:24,300 --> 00:00:26,160
+or bring a saved timing capture.
+
+9
+00:00:26,740 --> 00:00:28,960
+Add the matching source and clock constraints.
+
+10
+00:00:29,860 --> 00:00:32,240
+Block designs and Tcl scripts can add context.
+
+11
+00:00:32,240 --> 00:00:34,660
+Here, choose design files.
+
+12
+00:00:35,300 --> 00:00:36,520
+We have the original capture,
+
+13
+00:00:37,020 --> 00:00:38,620
+the counter's SystemVerilog,
+
+14
+00:00:38,940 --> 00:00:39,840
+and its constraints.
+
+15
+00:00:40,680 --> 00:00:42,500
+Click Analyze selected files.
+
+16
+00:00:43,300 --> 00:00:46,580
+The overview shows 32 failing setup endpoints.
+
+17
+00:00:47,300 --> 00:00:48,980
+Click Review first issue.
+
+18
+00:00:49,640 --> 00:00:52,880
+TimingLens connects the measured path to a
+specific question.
+
+19
+00:00:53,460 --> 00:00:56,480
+Can we shorten the comparison that drives the
+register enable?
+
+20
+00:00:57,080 --> 00:00:58,140
+Open timing path.
+
+21
+00:00:58,140 --> 00:01:02,900
+Those four carry blocks sit between the counter
+register and its enable.
+
+22
+00:01:03,580 --> 00:01:06,120
+The raw Vivado report puts a number on the
+miss.
+
+23
+00:01:07,060 --> 00:01:11,640
+Worst setup slack is −0.633 nanoseconds.
+
+24
+00:01:13,220 --> 00:01:15,460
+Choose Review counter experiment.
+
+25
+00:01:15,940 --> 00:01:17,200
+Here's the suggested fix.
+
+26
+00:01:17,860 --> 00:01:22,060
+The original line compares a 32-bit count with
+a 4-bit request.
+
+27
+00:01:22,620 --> 00:01:26,400
+In the replacement, any upper bit set means the
+request fits.
+
+28
+00:01:26,400 --> 00:01:29,660
+Otherwise, compare just the low 4 bits.
+
+29
+00:01:30,260 --> 00:01:32,720
+The subtraction stays on the same clock edge.
+
+30
+00:01:33,420 --> 00:01:35,580
+Select Validate and run experiment.
+
+31
+00:01:36,700 --> 00:01:42,680
+First, both versions are checked against a
+counter model over 10,289 simulation cycles.
+
+32
+00:01:43,460 --> 00:01:47,580
+Then, Vivado routes the original and the
+candidate in separate copies,
+
+33
+00:01:47,940 --> 00:01:52,020
+using the same 4-nanosecond constraint and the
+same Default recipe.
+
+34
+00:01:52,500 --> 00:01:54,640
+The implementation footage is sped up here.
+
+35
+00:01:54,640 --> 00:01:57,040
+Now, look at the Experiment Lab.
+
+36
+00:01:57,900 --> 00:02:04,640
+Worst setup slack went from −0.633 to +0.407
+nanoseconds.
+
+37
+00:02:05,320 --> 00:02:08,340
+All 32 failing setup endpoints are gone.
+
+38
+00:02:09,280 --> 00:02:10,820
+Hold and pulse width pass too.
+
+39
+00:02:11,120 --> 00:02:15,440
+This standalone counter now meets its 250 MHz
+target.
+
+40
+00:02:16,140 --> 00:02:20,400
+Export comparison saves both run records and an
+HTML report.
+
+41
+00:02:20,400 --> 00:02:26,180
+Another engineer can review the exact RTL
+change and the routed measurements behind it.
+
+42
+00:02:26,890 --> 00:02:30,765
+TimingLens found the late enable and suggested
+a shorter comparison.
+
+43
+00:02:31,515 --> 00:02:32,578
+It checked the new guard,
+
+44
+00:02:32,973 --> 00:02:36,078
+then routed both versions with the same clock
+and recipe.
+
+45
+00:02:36,765 --> 00:02:39,702
+32 failing setup endpoints dropped to zero.
+
+46
+00:02:40,390 --> 00:02:43,411
+The standalone counter meets 250 MHz.

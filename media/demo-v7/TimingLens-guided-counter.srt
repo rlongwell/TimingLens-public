@@ -1,0 +1,336 @@
+1
+00:00:00,940 --> 00:00:03,640
+A timing report tells you that a path failed.
+
+2
+00:00:04,200 --> 00:00:08,840
+The harder question is what to change and how
+to know that the change actually helped.
+
+3
+00:00:09,680 --> 00:00:11,200
+TimingLens connects those steps.
+
+4
+00:00:11,900 --> 00:00:17,140
+Measured timing, source context, a testable
+experiment, and the evidence behind the result.
+
+5
+00:00:17,980 --> 00:00:21,380
+Start with a Vivado project or checkpoint and
+the matching source files.
+
+6
+00:00:22,120 --> 00:00:25,160
+TimingLens uses your installed Vivado to
+inspect the design.
+
+7
+00:00:25,160 --> 00:00:26,740
+Already have the evidence?
+
+8
+00:00:27,560 --> 00:00:30,700
+Open a saved TimingLens capture or import
+timing
+
+9
+00:00:30,700 --> 00:00:35,040
+reports alongside your Verilog or SystemVerilog
+and XDC constraints.
+
+10
+00:00:35,820 --> 00:00:41,060
+Block design and Tcl files can add context.
+Keep the source revision matched to the build.
+
+11
+00:00:41,840 --> 00:00:46,800
+Inside the tool, measured cells, nets, and
+delays become a connected timing graph.
+
+12
+00:00:47,580 --> 00:00:49,200
+Source information adds context.
+
+13
+00:00:49,200 --> 00:00:53,640
+Deterministic engineering rules group related
+symptoms into investigations,
+
+14
+00:00:54,060 --> 00:00:57,820
+so a long logic chain and its routing delay can
+be examined together.
+
+15
+00:00:58,400 --> 00:00:59,880
+The analysis runs locally.
+
+16
+00:01:00,720 --> 00:01:03,300
+Missing evidence stays visible, and source
+hints are
+
+17
+00:01:03,300 --> 00:01:06,060
+qualified instead of treated as proof of
+causality.
+
+18
+00:01:07,520 --> 00:01:09,740
+Let's follow one design through the
+application.
+
+19
+00:01:10,360 --> 00:01:14,020
+It's a 32-bit counter with a 250 MHz target.
+
+20
+00:01:14,860 --> 00:01:16,780
+Start here gives us two ways in.
+
+21
+00:01:16,780 --> 00:01:22,180
+We'll inspect the original build first, then
+use the guided experiment to try the fix.
+
+22
+00:01:23,240 --> 00:01:24,240
+Choose design files.
+
+23
+00:01:24,960 --> 00:01:26,240
+Here are the three inputs.
+
+24
+00:01:26,880 --> 00:01:31,760
+The saved timing capture, the SystemVerilog
+that produced it, and the clock constraints.
+
+25
+00:01:32,460 --> 00:01:36,180
+Take a look at the selection, then click
+Analyze selected files.
+
+26
+00:01:36,900 --> 00:01:40,160
+The overview shows 32 failing setup endpoints.
+
+27
+00:01:40,840 --> 00:01:44,780
+Worst setup slack is minus 0.633 nanoseconds.
+
+28
+00:01:44,780 --> 00:01:47,240
+Click Review first issue.
+
+29
+00:01:48,000 --> 00:01:51,800
+TimingLens groups the routing delay and the
+carry chain on the same paths.
+
+30
+00:01:52,340 --> 00:01:56,660
+The first recommendation is to shorten the
+comparison that drives the counter’s enable.
+
+31
+00:01:57,360 --> 00:02:00,700
+Change preview shows the expression the tool
+wants us to review.
+
+32
+00:02:01,260 --> 00:02:03,000
+Let's see why it picked that expression.
+
+33
+00:02:03,660 --> 00:02:04,700
+Open timing path.
+
+34
+00:02:05,540 --> 00:02:07,620
+Follow the worst path from a counter register
+
+35
+00:02:07,620 --> 00:02:10,900
+through four carry blocks to a register's clock
+enable.
+
+36
+00:02:10,900 --> 00:02:14,920
+The raw Vivado path gives the deadline and the
+arrival time.
+
+37
+00:02:15,440 --> 00:02:18,580
+The enable is 633 picoseconds late.
+
+38
+00:02:19,260 --> 00:02:21,660
+Open correlated RTL to see the counter.
+
+39
+00:02:22,240 --> 00:02:24,220
+The source link identifies the module.
+
+40
+00:02:24,820 --> 00:02:28,380
+The line to investigate is the condition just
+before the subtraction.
+
+41
+00:02:28,900 --> 00:02:33,020
+On an accepted request, the counter subtracts
+only when enough remains.
+
+42
+00:02:33,660 --> 00:02:38,740
+The original guard compares the entire 32-bit
+count against a 4-bit request.
+
+43
+00:02:38,740 --> 00:02:41,600
+4 bits can ask for at most 15.
+
+44
+00:02:42,180 --> 00:02:43,180
+That's the opportunity.
+
+45
+00:02:44,080 --> 00:02:45,540
+Split the count at bit 4.
+
+46
+00:02:45,940 --> 00:02:49,520
+If any upper bit is set, there are at least 16
+left.
+
+47
+00:02:50,100 --> 00:02:51,920
+Even a request for 15 fits.
+
+48
+00:02:52,520 --> 00:02:57,060
+If all the upper bits are 0, compare just the
+low 4 bits with the request.
+
+49
+00:02:57,620 --> 00:02:59,420
+9 left and 12 requested?
+
+50
+00:02:59,900 --> 00:03:00,580
+Hold the count.
+
+51
+00:03:01,080 --> 00:03:02,980
+The two checks are joined by an OR.
+
+52
+00:03:03,460 --> 00:03:07,700
+The subtraction stays exactly where it was,
+with no extra clock cycle.
+
+53
+00:03:07,700 --> 00:03:11,720
+Back at Start here, choose Review counter
+experiment.
+
+54
+00:03:12,300 --> 00:03:16,800
+The highlighted diff shows the original guard
+in red and its replacement in green.
+
+55
+00:03:17,460 --> 00:03:19,060
+Open Validation and recipe.
+
+56
+00:03:19,740 --> 00:03:24,900
+Both versions get the same 4-nanosecond clock
+and the same Default implementation recipe.
+
+57
+00:03:25,380 --> 00:03:26,660
+Only the guard changes.
+
+58
+00:03:27,500 --> 00:03:29,320
+Select Validate and run experiment.
+
+59
+00:03:30,000 --> 00:03:34,420
+TimingLens first checks the original and the
+candidate against an independent model
+
+60
+00:03:34,420 --> 00:03:37,980
+over 10,289 simulation cycles.
+
+61
+00:03:38,500 --> 00:03:43,420
+Then Vivado routes the original in its own
+directory, followed by the candidate in
+another.
+
+62
+00:03:43,960 --> 00:03:45,560
+We're speeding up the tool runs here.
+
+63
+00:03:46,020 --> 00:03:48,080
+The status tells you which version is building.
+
+64
+00:03:48,680 --> 00:03:52,920
+When the builds finish, the whole-core
+comparison opens in the Experiment Lab.
+
+65
+00:03:53,700 --> 00:03:54,880
+Start with setup slack.
+
+66
+00:03:55,620 --> 00:04:01,420
+Minus 0.633 becomes plus 0.407 nanoseconds.
+
+67
+00:04:01,960 --> 00:04:03,540
+Next, look at the endpoints.
+
+68
+00:04:03,540 --> 00:04:06,640
+All 32 setup failures are gone.
+
+69
+00:04:07,320 --> 00:04:10,180
+Physical lookup tables drop from 50 to 41.
+
+70
+00:04:11,040 --> 00:04:12,540
+Hold and pulse width pass too.
+
+71
+00:04:13,000 --> 00:04:14,520
+Open Checks and context.
+
+72
+00:04:15,040 --> 00:04:18,460
+The standalone core meets timing at 250 MHz.
+
+73
+00:04:19,220 --> 00:04:21,980
+Timing in the integrated design is still
+untested.
+
+74
+00:04:22,640 --> 00:04:28,340
+Export comparison saves both run records, the
+measured differences, and an HTML report.
+
+75
+00:04:28,860 --> 00:04:32,420
+Another engineer can reopen that evidence and
+review the same decision.

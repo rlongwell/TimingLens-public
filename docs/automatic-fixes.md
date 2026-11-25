@@ -1,0 +1,31 @@
+# Automatically applying a verified fix
+
+Use **Add design…** to open a self-contained static Vivado project. Under **Automatic fixes**, choose a project copy or an update to the selected project. The default is **Analysis only**. The CLI defaults to applying a supported change in a new project copy. Add `--apply-to-source` to publish to the selected project. Each invocation needs a fresh job directory.
+
+## What gets tried
+
+The runner builds an isolated baseline from the project's native sources, constraints and block designs. It uses the same local Vivado release, rebuilt hierarchy, Default placement, physical optimization and routing on each side. This controlled recipe is independent of historical runs. Timing-driven changes require a failing setup path. Resource-driven changes use a configurable utilization limit. Both require valid clock coverage. The runner can try up to three distinct recommendations independently against the same baseline.
+
+- **RTL arithmetic.** TimingLens matches the measured path and native source location to a supported feed-forward expression and a chain of existing registers. It generates replacement RTL, uses Yosys and Z3 to check arbitrary binary inputs after pipeline fill, and retains the proof, solver transcript and source diff.
+- **Xilinx IP Integrator.** TimingLens traces LUT/carry logic to a Multiplier Generator v12.0 instance using native netlist hierarchy and the matching block design. Some IP reports suppress per-pin delays. If every pin on a fully traced path belongs to the same instance, the measured whole-path logic delay can establish the scope. The runner changes the implementation from LUTs to dedicated multipliers, keeps widths and latency, and checks the native BD and its linked XCI. XSim checks 4,096 products against an independent scoreboard for each configuration. This is scoped simulation evidence. The supported interface is a full-width unsigned parallel multiplier with CLK, A, B and P.
+
+## Freeing an overused resource
+
+Select **Rebalance overused resources** in the automatic project workflow or add `--resource-limit 85` to `auto-fix`. The percentage applies to all four pools reported by Vivado: total LUTs, memory-capable LUTs, block RAM tiles and DSPs. The runner uses the reported usable capacity, including site reservations and fractional block RAM tiles. A timing-clean baseline can trigger an experiment. If placement fails with a confirmed allocation error and synthesized usage exceeds the device capacity, the synthesized checkpoint supplies the baseline. Only the candidate can supply routed timing for that comparison.
+
+| Supported source | Available alternatives | Validation |
+| --- | --- | --- |
+| IP Integrator Multiplier Generator v12.0, unsigned parallel, full product | DSP48 implementation or LUT logic, with the same ports, widths and latency | Native BD and XCI semantic checks, generated IP simulation on both configurations, and primitive ownership in the integrated build |
+| Standalone synchronous, read-first, single-port Verilog/SystemVerilog RAM | Block RAM or distributed RAM, selected by a Vivado synthesis attribute | XSim scoreboard on both synthesized hardware models, including same-address read/write collisions, disabled writes and full address coverage |
+
+The RAM matcher supports literal power-of-two depths from 2 through 4,096 and widths from 1 through 64 bits. It can insert a mapping hint or update a supported existing hint. The original implementation comes from the native hierarchy and utilization evidence. Each candidate changes one source block and includes all affected instances. Several independent blocks can be tried against the same baseline. Designs that require a sequence of different edits remain available for review.
+
+Before starting a build, TimingLens checks whether the destination has room for a lower bound on the additional resources, including the number of affected instances. After routing, it checks actual usage in all four pools, a reduction in the source pool, the new primitive family in every affected instance, and the usual functional, timing, routing and DRC gates. A change can trade some positive setup slack for capacity if timing still passes. The job records resource counts and percentages in `decision.json` and the candidate's `resource-budget.json`; the comparison embeds the budget, checks and native reports.
+
+## How to read the result
+
+`decision.json` records the outcome, attempted recommendations, reasons and evidence location. A verified change requires a routed design-wide setup, hold and pulse-width pass, matching context and constraints, clean routing, and zero DRC errors or critical warnings. The general Lab regression guard also flags a reduction in positive hold or pulse-width margin. The automatic closure policy permits that tradeoff when every check still passes. For a multiplier mapping, the runner also classifies Vivado DPIP-1 and DPOP-2 advisories about unused DSP pipeline registers. Keeping the original latency may leave those registers unused. Publication permits these advisories only when the native routed checkpoint identifies every affected DSP inside the edited IP and the full warning report accounts for the counts. Other increased warning families require review. The Lab retains the raw warning counts, timing margins and resource tradeoffs.
+
+The job retains native reports, checkpoints, project copies, patch and validation evidence for each routed experiment. Open `candidate-N/comparison/report.html` for a standalone comparison or load the two adjacent run records in Experiment Lab. Original files from an in-place publication are under `original/` with the project-relative paths. Native block edits publish the BD and child XCI together. If the source changes during a run, the in-place update stops and the verified copy remains available.
+
+Unrecognized logic, unsupported IP, DFX and unresolved timing coverage require engineering review. A candidate that fails functional validation, exceeds device capacity, or misses timing cannot be published automatically. The current recipe requires project-local design inputs and a local installation of Vivado. The runner operates entirely on host files.

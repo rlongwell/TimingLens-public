@@ -1,0 +1,7 @@
+set_property PACKAGE_PIN K17 [get_ports clk]
+set_property IOSTANDARD LVCMOS33 [get_ports clk]
+create_clock -name sample_clk -period 4.000 [get_ports clk]
+set_property PACKAGE_PIN M14 [get_ports status]
+set_property IOSTANDARD LVCMOS33 [get_ports status]
+set_output_delay -clock sample_clk -max 0.5 [get_ports status]
+set_output_delay -clock sample_clk -min 0.0 [get_ports status]

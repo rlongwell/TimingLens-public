@@ -1,0 +1,129 @@
+1
+00:00:00,400 --> 00:00:03,670
+This counter misses its 250 MHz target.
+
+2
+00:00:04,310 --> 00:00:07,130
+The slowest path ends at a register’s clock
+enable.
+
+3
+00:00:07,730 --> 00:00:12,090
+The decision to update the count arrives 633
+picoseconds late.
+
+4
+00:00:12,830 --> 00:00:15,870
+In TimingLens, open the guided counter
+experiment.
+
+5
+00:00:16,270 --> 00:00:19,590
+It includes the original source, the proposed
+change,
+
+6
+00:00:19,590 --> 00:00:21,830
+and the 4-nanosecond clock constraint.
+
+7
+00:00:22,470 --> 00:00:23,550
+Here’s the line we’re testing.
+
+8
+00:00:24,170 --> 00:00:27,630
+Before the counter can subtract, it checks
+whether there’s enough left.
+
+9
+00:00:27,630 --> 00:00:30,530
+The remaining count is 32 bits wide.
+
+10
+00:00:31,010 --> 00:00:35,390
+The amount to subtract is only 4 bits, so the
+largest request is 15.
+
+11
+00:00:35,770 --> 00:00:36,930
+That gives us a shortcut.
+
+12
+00:00:37,510 --> 00:00:41,610
+If any of the upper 28 bits is set, at least
+16 remain.
+
+13
+00:00:42,110 --> 00:00:43,970
+Even a request for 15 fits.
+
+14
+00:00:44,470 --> 00:00:48,370
+If all those bits are zero, the low 4 bits
+tell the whole story.
+
+15
+00:00:48,810 --> 00:00:51,770
+With 9 remaining, a request for 12 must wait.
+
+16
+00:00:52,350 --> 00:00:54,830
+The proposed change combines those two
+checks.
+
+17
+00:00:54,830 --> 00:00:58,530
+It keeps the same subtraction and adds no
+clock cycle.
+
+18
+00:00:59,350 --> 00:01:01,110
+Select Validate and run experiment.
+
+19
+00:01:01,850 --> 00:01:06,790
+Both versions get the same inputs for 10,289
+simulated cycles.
+
+20
+00:01:07,210 --> 00:01:10,270
+Then Vivado places and routes isolated copies
+
+21
+00:01:10,270 --> 00:01:13,250
+with the same clock and the same
+implementation recipe.
+
+22
+00:01:13,670 --> 00:01:15,290
+We’re speeding through those builds here.
+
+23
+00:01:15,870 --> 00:01:18,630
+The Experiment Lab opens on the routed
+results.
+
+24
+00:01:18,630 --> 00:01:22,730
+Worst setup slack goes from minus 0.633
+
+25
+00:01:22,730 --> 00:01:26,550
+to plus 0.407 nanoseconds.
+
+26
+00:01:26,690 --> 00:01:29,710
+All 32 failing setup endpoints now pass.
+
+27
+00:01:30,310 --> 00:01:33,230
+The core also uses 9 fewer lookup tables.
+
+28
+00:01:33,670 --> 00:01:37,520
+This standalone counter meets timing at 250
+MHz.
+
+29
+00:01:38,090 --> 00:01:40,510
+The next check is timing in the full system.

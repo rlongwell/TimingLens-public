@@ -1,0 +1,12 @@
+{
+  "seconds": 150,
+  "unchanged_video_frames": 4500,
+  "identical_video_packets_and_timestamps": true,
+  "identical_chapters": true,
+  "audio_samples": 7200000,
+  "encoded_lufs": "-16.03",
+  "encoded_true_peak_dbtp": "-2.96",
+  "caption_start_seconds": 69.72,
+  "encoded_passage_transcript": "Worst setup slack is minus 0.633 nanoseconds. Choose Review Counter Experiment. Here's the suggested fix.",
+  "sha256": "0c7659bb952e6b7aaa22bb85212932c6fb50aa3eeec468e6caa2ecab23b865f7"
+}

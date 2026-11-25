@@ -1,0 +1,1387 @@
+{
+  "schema_version": 1,
+  "name": "Zybo BLAKE2s DFX regression",
+  "vivado": "2024.2",
+  "stage": "routed",
+  "part": "xc7z020clg400-1",
+  "paths": [
+    {
+      "id": "P00001",
+      "analysis": "setup",
+      "startpoint": "u_shell/reset_count_reg[2]/C",
+      "endpoint": "u_hash/engine/input_buffer/remaining_reg[10]/CE",
+      "start_clock": "clk_fpga_0",
+      "end_clock": "clk_fpga_0",
+      "group": "clk_fpga_0",
+      "corner": "Slow",
+      "path_type": "Setup (Max at Slow Process Corner)",
+      "slack_ns": -0.011,
+      "requirement_ns": 10.0,
+      "arrival_ns": 12.492,
+      "required_ns": 12.481,
+      "datapath_ns": 9.549,
+      "logic_ns": 3.026,
+      "routing_ns": 6.523,
+      "skew_ns": -0.103,
+      "uncertainty_ns": 0.154,
+      "levels": 16,
+      "pins": [
+        "u_shell/reset_count_reg[2]/C",
+        "u_shell/reset_count_reg[2]/Q",
+        "u_shell/rp_resetn_INST_0/I1",
+        "u_shell/rp_resetn_INST_0/O",
+        "u_shell/rp_tkeep[7]_INST_0/I1",
+        "u_shell/rp_tkeep[7]_INST_0/O",
+        "u_hash/engine/input_buffer/count_q[3]_i_6/I4",
+        "u_hash/engine/input_buffer/count_q[3]_i_6/O",
+        "u_hash/engine/input_buffer/count_q[3]_i_5/I0",
+        "u_hash/engine/input_buffer/count_q[3]_i_5/O",
+        "u_hash/engine/input_buffer/error_i_45/I1",
+        "u_hash/engine/input_buffer/error_i_45/O",
+        "u_hash/engine/input_buffer/error_reg_i_36/S[1]",
+        "u_hash/engine/input_buffer/error_reg_i_36/CO[3]",
+        "u_hash/engine/input_buffer/error_reg_i_31/CI",
+        "u_hash/engine/input_buffer/error_reg_i_31/CO[3]",
+        "u_hash/engine/input_buffer/error_reg_i_26/CI",
+        "u_hash/engine/input_buffer/error_reg_i_26/CO[3]",
+        "u_hash/engine/input_buffer/error_reg_i_21/CI",
+        "u_hash/engine/input_buffer/error_reg_i_21/CO[3]",
+        "u_hash/engine/input_buffer/error_reg_i_16/CI",
+        "u_hash/engine/input_buffer/error_reg_i_16/CO[3]",
+        "u_hash/engine/input_buffer/error_reg_i_11/CI",
+        "u_hash/engine/input_buffer/error_reg_i_11/CO[3]",
+        "u_hash/engine/input_buffer/error_reg_i_6/CI",
+        "u_hash/engine/input_buffer/error_reg_i_6/CO[3]",
+        "u_hash/engine/input_buffer/error_reg_i_4/CI",
+        "u_hash/engine/input_buffer/error_reg_i_4/CO[3]",
+        "u_hash/engine/input_buffer/remaining[63]_i_8/I1",
+        "u_hash/engine/input_buffer/remaining[63]_i_8/O",
+        "u_hash/engine/input_buffer/remaining[63]_i_4/I2",
+        "u_hash/engine/input_buffer/remaining[63]_i_4/O",
+        "u_hash/engine/input_buffer/remaining[63]_i_1/I1",
+        "u_hash/engine/input_buffer/remaining[63]_i_1/O",
+        "u_hash/engine/input_buffer/remaining_reg[10]/CE"
+      ],
+      "cells": [
+        "u_shell/reset_count_reg[2]",
+        "u_shell/rp_resetn_INST_0",
+        "u_shell/rp_tkeep[7]_INST_0",
+        "u_hash/engine/input_buffer/count_q[3]_i_6",
+        "u_hash/engine/input_buffer/count_q[3]_i_5",
+        "u_hash/engine/input_buffer/error_i_45",
+        "u_hash/engine/input_buffer/error_reg_i_36",
+        "u_hash/engine/input_buffer/error_reg_i_31",
+        "u_hash/engine/input_buffer/error_reg_i_26",
+        "u_hash/engine/input_buffer/error_reg_i_21",
+        "u_hash/engine/input_buffer/error_reg_i_16",
+        "u_hash/engine/input_buffer/error_reg_i_11",
+        "u_hash/engine/input_buffer/error_reg_i_6",
+        "u_hash/engine/input_buffer/error_reg_i_4",
+        "u_hash/engine/input_buffer/remaining[63]_i_8",
+        "u_hash/engine/input_buffer/remaining[63]_i_4",
+        "u_hash/engine/input_buffer/remaining[63]_i_1",
+        "u_hash/engine/input_buffer/remaining_reg[10]"
+      ],
+      "nets": [
+        "u_shell/reset_count_reg_n_0_[2]",
+        "rp_resetn",
+        "rp_tkeep[7]",
+        "u_hash/engine/input_buffer/count_q[3]_i_6_n_0",
+        "u_hash/engine/input_buffer/p_0_in[3]",
+        "u_hash/engine/input_buffer/error_i_45_n_0",
+        "u_hash/engine/input_buffer/error_reg_i_36_n_0",
+        "u_hash/engine/input_buffer/error_reg_i_31_n_0",
+        "u_hash/engine/input_buffer/error_reg_i_26_n_0",
+        "u_hash/engine/input_buffer/error_reg_i_21_n_0",
+        "u_hash/engine/input_buffer/error_reg_i_16_n_0",
+        "u_hash/engine/input_buffer/error_reg_i_11_n_0",
+        "u_hash/engine/input_buffer/error_reg_i_6_n_0",
+        "u_hash/engine/input_buffer/error_reg_i_4_n_0",
+        "u_hash/engine/input_buffer/remaining[63]_i_8_n_0",
+        "u_hash/engine/input_buffer_n_116",
+        "u_hash/engine/input_buffer/remaining[63]_i_1_n_0"
+      ],
+      "arcs": [
+        {
+          "source": "u_shell/reset_count_reg[2]/C",
+          "sink": "u_shell/reset_count_reg[2]/Q",
+          "kind": "cell",
+          "resource": "u_shell/reset_count_reg[2]",
+          "delay_ns": null
+        },
+        {
+          "source": "u_shell/reset_count_reg[2]/Q",
+          "sink": "u_shell/rp_resetn_INST_0/I1",
+          "kind": "net",
+          "resource": "u_shell/reset_count_reg_n_0_[2]",
+          "delay_ns": null
+        },
+        {
+          "source": "u_shell/rp_resetn_INST_0/I1",
+          "sink": "u_shell/rp_resetn_INST_0/O",
+          "kind": "cell",
+          "resource": "u_shell/rp_resetn_INST_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_shell/rp_tkeep[7]_INST_0/I1",
+          "sink": "u_shell/rp_tkeep[7]_INST_0/O",
+          "kind": "cell",
+          "resource": "u_shell/rp_tkeep[7]_INST_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_shell/rp_tkeep[7]_INST_0/O",
+          "sink": "u_hash/engine/input_buffer/count_q[3]_i_6/I4",
+          "kind": "net",
+          "resource": "rp_tkeep[7]",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/count_q[3]_i_6/I4",
+          "sink": "u_hash/engine/input_buffer/count_q[3]_i_6/O",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/count_q[3]_i_6",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/count_q[3]_i_6/O",
+          "sink": "u_hash/engine/input_buffer/count_q[3]_i_5/I0",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/count_q[3]_i_6_n_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/count_q[3]_i_5/I0",
+          "sink": "u_hash/engine/input_buffer/count_q[3]_i_5/O",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/count_q[3]_i_5",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/count_q[3]_i_5/O",
+          "sink": "u_hash/engine/input_buffer/error_i_45/I1",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/p_0_in[3]",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_i_45/I1",
+          "sink": "u_hash/engine/input_buffer/error_i_45/O",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/error_i_45",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_i_45/O",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_36/S[1]",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/error_i_45_n_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_36/S[1]",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_36/CO[3]",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_36",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_36/CO[3]",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_31/CI",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_36_n_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_31/CI",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_31/CO[3]",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_31",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_31/CO[3]",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_26/CI",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_31_n_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_26/CI",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_26/CO[3]",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_26",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_26/CO[3]",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_21/CI",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_26_n_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_21/CI",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_21/CO[3]",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_21",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_21/CO[3]",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_16/CI",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_21_n_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_16/CI",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_16/CO[3]",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_16",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_16/CO[3]",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_11/CI",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_16_n_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_11/CI",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_11/CO[3]",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_11",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_11/CO[3]",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_6/CI",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_11_n_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_6/CI",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_6/CO[3]",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_6",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_6/CO[3]",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_4/CI",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_6_n_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_4/CI",
+          "sink": "u_hash/engine/input_buffer/error_reg_i_4/CO[3]",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_4",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/error_reg_i_4/CO[3]",
+          "sink": "u_hash/engine/input_buffer/remaining[63]_i_8/I1",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/error_reg_i_4_n_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/remaining[63]_i_8/I1",
+          "sink": "u_hash/engine/input_buffer/remaining[63]_i_8/O",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/remaining[63]_i_8",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/remaining[63]_i_8/O",
+          "sink": "u_hash/engine/input_buffer/remaining[63]_i_4/I2",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/remaining[63]_i_8_n_0",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/remaining[63]_i_4/I2",
+          "sink": "u_hash/engine/input_buffer/remaining[63]_i_4/O",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/remaining[63]_i_4",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/remaining[63]_i_4/O",
+          "sink": "u_hash/engine/input_buffer/remaining[63]_i_1/I1",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer_n_116",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/remaining[63]_i_1/I1",
+          "sink": "u_hash/engine/input_buffer/remaining[63]_i_1/O",
+          "kind": "cell",
+          "resource": "u_hash/engine/input_buffer/remaining[63]_i_1",
+          "delay_ns": null
+        },
+        {
+          "source": "u_hash/engine/input_buffer/remaining[63]_i_1/O",
+          "sink": "u_hash/engine/input_buffer/remaining_reg[10]/CE",
+          "kind": "net",
+          "resource": "u_hash/engine/input_buffer/remaining[63]_i_1_n_0",
+          "delay_ns": null
+        }
+      ],
+      "properties": {
+        "CLOCK_PESSIMISM": "0.129",
+        "STARTPOINT_CLOCK_DELAY": "2.943",
+        "ENDPOINT_CLOCK_DELAY": "2.711",
+        "ROUTABLE_NETS": "9"
+      }
+    }
+  ],
+  "pins": {
+    "u_shell/reset_count_reg[2]/Q": {
+      "name": "u_shell/reset_count_reg[2]/Q",
+      "direction": "OUT",
+      "cell": "u_shell/reset_count_reg[2]",
+      "ref_pin": "Q",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_26/CI": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_26/CI",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_26",
+      "ref_pin": "CI",
+      "port": false
+    },
+    "u_shell/rp_tkeep[7]_INST_0/I1": {
+      "name": "u_shell/rp_tkeep[7]_INST_0/I1",
+      "direction": "IN",
+      "cell": "u_shell/rp_tkeep[7]_INST_0",
+      "ref_pin": "I1",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_i_45/O": {
+      "name": "u_hash/engine/input_buffer/error_i_45/O",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/error_i_45",
+      "ref_pin": "O",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/remaining_reg[10]/CE": {
+      "name": "u_hash/engine/input_buffer/remaining_reg[10]/CE",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/remaining_reg[10]",
+      "ref_pin": "CE",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_16/CI": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_16/CI",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_16",
+      "ref_pin": "CI",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/count_q[3]_i_6/I4": {
+      "name": "u_hash/engine/input_buffer/count_q[3]_i_6/I4",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/count_q[3]_i_6",
+      "ref_pin": "I4",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/remaining[63]_i_1/I1": {
+      "name": "u_hash/engine/input_buffer/remaining[63]_i_1/I1",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/remaining[63]_i_1",
+      "ref_pin": "I1",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_11/CO[3]": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_11/CO[3]",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_11",
+      "ref_pin": "CO[3]",
+      "port": false
+    },
+    "u_shell/rp_tkeep[7]_INST_0/O": {
+      "name": "u_shell/rp_tkeep[7]_INST_0/O",
+      "direction": "OUT",
+      "cell": "u_shell/rp_tkeep[7]_INST_0",
+      "ref_pin": "O",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/remaining[63]_i_1/O": {
+      "name": "u_hash/engine/input_buffer/remaining[63]_i_1/O",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/remaining[63]_i_1",
+      "ref_pin": "O",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/remaining[63]_i_4/O": {
+      "name": "u_hash/engine/input_buffer/remaining[63]_i_4/O",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/remaining[63]_i_4",
+      "ref_pin": "O",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_31/CI": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_31/CI",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_31",
+      "ref_pin": "CI",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_11/CI": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_11/CI",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_11",
+      "ref_pin": "CI",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/count_q[3]_i_5/I0": {
+      "name": "u_hash/engine/input_buffer/count_q[3]_i_5/I0",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/count_q[3]_i_5",
+      "ref_pin": "I0",
+      "port": false
+    },
+    "u_shell/rp_resetn_INST_0/I1": {
+      "name": "u_shell/rp_resetn_INST_0/I1",
+      "direction": "IN",
+      "cell": "u_shell/rp_resetn_INST_0",
+      "ref_pin": "I1",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_i_45/I1": {
+      "name": "u_hash/engine/input_buffer/error_i_45/I1",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/error_i_45",
+      "ref_pin": "I1",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_36/S[1]": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_36/S[1]",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_36",
+      "ref_pin": "S[1]",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/count_q[3]_i_6/O": {
+      "name": "u_hash/engine/input_buffer/count_q[3]_i_6/O",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/count_q[3]_i_6",
+      "ref_pin": "O",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_6/CO[3]": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_6/CO[3]",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_6",
+      "ref_pin": "CO[3]",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/remaining[63]_i_8/O": {
+      "name": "u_hash/engine/input_buffer/remaining[63]_i_8/O",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/remaining[63]_i_8",
+      "ref_pin": "O",
+      "port": false
+    },
+    "u_shell/reset_count_reg[2]/C": {
+      "name": "u_shell/reset_count_reg[2]/C",
+      "direction": "IN",
+      "cell": "u_shell/reset_count_reg[2]",
+      "ref_pin": "C",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_31/CO[3]": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_31/CO[3]",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_31",
+      "ref_pin": "CO[3]",
+      "port": false
+    },
+    "u_shell/rp_resetn_INST_0/O": {
+      "name": "u_shell/rp_resetn_INST_0/O",
+      "direction": "OUT",
+      "cell": "u_shell/rp_resetn_INST_0",
+      "ref_pin": "O",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_21/CO[3]": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_21/CO[3]",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_21",
+      "ref_pin": "CO[3]",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_6/CI": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_6/CI",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_6",
+      "ref_pin": "CI",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_26/CO[3]": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_26/CO[3]",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_26",
+      "ref_pin": "CO[3]",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_4/CO[3]": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_4/CO[3]",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_4",
+      "ref_pin": "CO[3]",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_4/CI": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_4/CI",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_4",
+      "ref_pin": "CI",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/remaining[63]_i_4/I2": {
+      "name": "u_hash/engine/input_buffer/remaining[63]_i_4/I2",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/remaining[63]_i_4",
+      "ref_pin": "I2",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/remaining[63]_i_8/I1": {
+      "name": "u_hash/engine/input_buffer/remaining[63]_i_8/I1",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/remaining[63]_i_8",
+      "ref_pin": "I1",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_36/CO[3]": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_36/CO[3]",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_36",
+      "ref_pin": "CO[3]",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/count_q[3]_i_5/O": {
+      "name": "u_hash/engine/input_buffer/count_q[3]_i_5/O",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/count_q[3]_i_5",
+      "ref_pin": "O",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_16/CO[3]": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_16/CO[3]",
+      "direction": "OUT",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_16",
+      "ref_pin": "CO[3]",
+      "port": false
+    },
+    "u_hash/engine/input_buffer/error_reg_i_21/CI": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_21/CI",
+      "direction": "IN",
+      "cell": "u_hash/engine/input_buffer/error_reg_i_21",
+      "ref_pin": "CI",
+      "port": false
+    }
+  },
+  "cells": {
+    "u_hash/engine/input_buffer/count_q[3]_i_6": {
+      "name": "u_hash/engine/input_buffer/count_q[3]_i_6",
+      "primitive": "LUT5",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "LUT5",
+      "original_name": null,
+      "location": "SLICE_X51Y58",
+      "bel": "SLICEL.B6LUT",
+      "init": "32'hFF969600",
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "LUT.others.LUT5"
+      }
+    },
+    "u_shell/rp_tkeep[7]_INST_0": {
+      "name": "u_shell/rp_tkeep[7]_INST_0",
+      "primitive": "LUT2",
+      "parent": "u_shell",
+      "original_ref": "LUT2",
+      "original_name": null,
+      "location": "SLICE_X49Y55",
+      "bel": "SLICEL.A5LUT",
+      "init": "4'h8",
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/static/hash_shell.sv",
+        "first_line": 57,
+        "last_line": 57,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "LUT.others.LUT2",
+        "DONT_TOUCH": "1"
+      }
+    },
+    "u_hash/engine/input_buffer/error_i_45": {
+      "name": "u_hash/engine/input_buffer/error_i_45",
+      "primitive": "LUT4",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "LUT4",
+      "original_name": null,
+      "location": "SLICE_X53Y56",
+      "bel": "SLICEL.B6LUT",
+      "init": "16'h9009",
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "LUT.others.LUT4"
+      }
+    },
+    "u_hash/engine/input_buffer/remaining[63]_i_4": {
+      "name": "u_hash/engine/input_buffer/remaining[63]_i_4",
+      "primitive": "LUT4",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "LUT4",
+      "original_name": null,
+      "location": "SLICE_X54Y62",
+      "bel": "SLICEM.C6LUT",
+      "init": "16'hFEFF",
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "LUT.others.LUT4"
+      }
+    },
+    "u_shell/rp_resetn_INST_0": {
+      "name": "u_shell/rp_resetn_INST_0",
+      "primitive": "LUT5",
+      "parent": "u_shell",
+      "original_ref": "LUT5",
+      "original_name": null,
+      "location": "SLICE_X49Y58",
+      "bel": "SLICEL.B6LUT",
+      "init": "32'h00000002",
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/static/hash_shell.sv",
+        "first_line": 57,
+        "last_line": 57,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "LUT.others.LUT5",
+        "DONT_TOUCH": "1"
+      }
+    },
+    "u_hash/engine/input_buffer/remaining_reg[10]": {
+      "name": "u_hash/engine/input_buffer/remaining_reg[10]",
+      "primitive": "FDRE",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "FDRE",
+      "original_name": null,
+      "location": "SLICE_X57Y63",
+      "bel": "SLICEL.AFF",
+      "init": "1'b0",
+      "sequential": true,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 34,
+        "last_line": 34,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "FLOP_LATCH.flop.FDRE"
+      }
+    },
+    "u_hash/engine/input_buffer": {
+      "name": "u_hash/engine/input_buffer",
+      "primitive": "axis_bytes",
+      "parent": "u_hash/engine",
+      "original_ref": "axis_bytes",
+      "original_name": null,
+      "location": null,
+      "bel": null,
+      "init": null,
+      "sequential": false,
+      "hierarchical": true,
+      "source": {
+        "file": "rtl/blake2s/hash_blake2s.sv",
+        "first_line": 65,
+        "last_line": 65,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {}
+    },
+    "u_hash/engine/input_buffer/error_reg_i_36": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_36",
+      "primitive": "CARRY4",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "CARRY4",
+      "original_name": null,
+      "location": "SLICE_X53Y56",
+      "bel": "SLICEL.CARRY4",
+      "init": null,
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "CARRY.others.CARRY4"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_31": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_31",
+      "primitive": "CARRY4",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "CARRY4",
+      "original_name": null,
+      "location": "SLICE_X53Y57",
+      "bel": "SLICEL.CARRY4",
+      "init": null,
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "CARRY.others.CARRY4"
+      }
+    },
+    "u_shell": {
+      "name": "u_shell",
+      "primitive": "hash_shell",
+      "parent": null,
+      "original_ref": "hash_shell",
+      "original_name": null,
+      "location": null,
+      "bel": null,
+      "init": null,
+      "sequential": false,
+      "hierarchical": true,
+      "source": {
+        "file": "rtl/net/net_system_top.sv",
+        "first_line": 159,
+        "last_line": 159,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "DONT_TOUCH": "1"
+      }
+    },
+    "u_shell/reset_count_reg[2]": {
+      "name": "u_shell/reset_count_reg[2]",
+      "primitive": "FDSE",
+      "parent": "u_shell",
+      "original_ref": "FDSE",
+      "original_name": null,
+      "location": "SLICE_X48Y58",
+      "bel": "SLICEL.CFF",
+      "init": "1'b1",
+      "sequential": true,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/static/hash_shell.sv",
+        "first_line": 70,
+        "last_line": 70,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "FLOP_LATCH.flop.FDSE",
+        "DONT_TOUCH": "1"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_6": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_6",
+      "primitive": "CARRY4",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "CARRY4",
+      "original_name": null,
+      "location": "SLICE_X53Y62",
+      "bel": "SLICEL.CARRY4",
+      "init": null,
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "CARRY.others.CARRY4"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_4": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_4",
+      "primitive": "CARRY4",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "CARRY4",
+      "original_name": null,
+      "location": "SLICE_X53Y63",
+      "bel": "SLICEL.CARRY4",
+      "init": null,
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "CARRY.others.CARRY4"
+      }
+    },
+    "u_hash/engine": {
+      "name": "u_hash/engine",
+      "primitive": "hash_blake2s",
+      "parent": "u_hash",
+      "original_ref": "hash_blake2s",
+      "original_name": null,
+      "location": null,
+      "bel": null,
+      "init": null,
+      "sequential": false,
+      "hierarchical": true,
+      "source": {
+        "file": "rtl/rm/blake2s.sv",
+        "first_line": 16,
+        "last_line": 16,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {}
+    },
+    "u_hash/engine/input_buffer/remaining[63]_i_1": {
+      "name": "u_hash/engine/input_buffer/remaining[63]_i_1",
+      "primitive": "LUT2",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "LUT2",
+      "original_name": null,
+      "location": "SLICE_X54Y63",
+      "bel": "SLICEM.B6LUT",
+      "init": "4'hB",
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "LUT.others.LUT2"
+      }
+    },
+    "u_hash/engine/input_buffer/count_q[3]_i_5": {
+      "name": "u_hash/engine/input_buffer/count_q[3]_i_5",
+      "primitive": "LUT6",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "LUT6",
+      "original_name": null,
+      "location": "SLICE_X51Y57",
+      "bel": "SLICEL.B6LUT",
+      "init": "64'h8000000000000000",
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "LUT.others.LUT6"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_11": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_11",
+      "primitive": "CARRY4",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "CARRY4",
+      "original_name": null,
+      "location": "SLICE_X53Y61",
+      "bel": "SLICEL.CARRY4",
+      "init": null,
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "CARRY.others.CARRY4"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_21": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_21",
+      "primitive": "CARRY4",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "CARRY4",
+      "original_name": null,
+      "location": "SLICE_X53Y59",
+      "bel": "SLICEL.CARRY4",
+      "init": null,
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "CARRY.others.CARRY4"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_26": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_26",
+      "primitive": "CARRY4",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "CARRY4",
+      "original_name": null,
+      "location": "SLICE_X53Y58",
+      "bel": "SLICEL.CARRY4",
+      "init": null,
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "CARRY.others.CARRY4"
+      }
+    },
+    "u_hash": {
+      "name": "u_hash",
+      "primitive": "hash_rm",
+      "parent": null,
+      "original_ref": "hash_rm",
+      "original_name": null,
+      "location": null,
+      "bel": null,
+      "init": null,
+      "sequential": false,
+      "hierarchical": true,
+      "source": {
+        "file": "rtl/net/net_system_top.sv",
+        "first_line": 203,
+        "last_line": 203,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "DONT_TOUCH": "1"
+      }
+    },
+    "u_hash/engine/input_buffer/remaining[63]_i_8": {
+      "name": "u_hash/engine/input_buffer/remaining[63]_i_8",
+      "primitive": "LUT5",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "LUT5",
+      "original_name": null,
+      "location": "SLICE_X54Y62",
+      "bel": "SLICEM.B6LUT",
+      "init": "32'hDFDFDFDD",
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "LUT.others.LUT5"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_16": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_16",
+      "primitive": "CARRY4",
+      "parent": "u_hash/engine/input_buffer",
+      "original_ref": "CARRY4",
+      "original_name": null,
+      "location": "SLICE_X53Y60",
+      "bel": "SLICEL.CARRY4",
+      "init": null,
+      "sequential": false,
+      "hierarchical": false,
+      "source": {
+        "file": "rtl/common/axis_bytes.sv",
+        "first_line": 23,
+        "last_line": 23,
+        "provenance": "vivado_cell_file_name_line_number"
+      },
+      "properties": {
+        "PRIMITIVE_TYPE": "CARRY.others.CARRY4"
+      }
+    }
+  },
+  "nets": {
+    "u_shell/reset_count_reg_n_0_[2]": {
+      "name": "u_shell/reset_count_reg_n_0_[2]",
+      "fanout": 4,
+      "drivers": [
+        "u_shell/reset_count_reg[2]/Q"
+      ],
+      "sinks": [
+        "u_shell/rp_resetn_INST_0/I1"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_shell/reset_count_reg_n_0_[2]"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "rp_resetn": {
+      "name": "rp_resetn",
+      "fanout": 179,
+      "drivers": [
+        "u_shell/rp_resetn_INST_0/O"
+      ],
+      "sinks": [],
+      "sinks_complete": false,
+      "aliases": [
+        "u_shell/rp_resetn",
+        "rp_resetn",
+        "u_hash/aresetn",
+        "u_hash/engine/aresetn",
+        "u_hash/engine/input_buffer/aresetn"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "rp_tkeep[7]": {
+      "name": "rp_tkeep[7]",
+      "fanout": 4,
+      "drivers": [
+        "u_shell/rp_tkeep[7]_INST_0/O"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/count_q[3]_i_6/I4"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_shell/rp_tkeep[7]",
+        "rp_tkeep[7]",
+        "u_hash/s_axis_tkeep[7]",
+        "u_hash/engine/s_axis_tkeep[7]",
+        "u_hash/engine/input_buffer/s_axis_tkeep[7]"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/count_q[3]_i_6_n_0": {
+      "name": "u_hash/engine/input_buffer/count_q[3]_i_6_n_0",
+      "fanout": 2,
+      "drivers": [
+        "u_hash/engine/input_buffer/count_q[3]_i_6/O"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/count_q[3]_i_5/I0"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/count_q[3]_i_6_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/p_0_in[3]": {
+      "name": "u_hash/engine/input_buffer/p_0_in[3]",
+      "fanout": 5,
+      "drivers": [
+        "u_hash/engine/input_buffer/count_q[3]_i_5/O"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/error_i_45/I1"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/p_0_in[3]"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/error_i_45_n_0": {
+      "name": "u_hash/engine/input_buffer/error_i_45_n_0",
+      "fanout": 1,
+      "drivers": [
+        "u_hash/engine/input_buffer/error_i_45/O"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/error_reg_i_36/S[1]"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/error_i_45_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "INTRASITE",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_36_n_0": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_36_n_0",
+      "fanout": 1,
+      "drivers": [
+        "u_hash/engine/input_buffer/error_reg_i_36/CO[3]"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/error_reg_i_31/CI"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/error_reg_i_36_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_31_n_0": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_31_n_0",
+      "fanout": 1,
+      "drivers": [
+        "u_hash/engine/input_buffer/error_reg_i_31/CO[3]"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/error_reg_i_26/CI"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/error_reg_i_31_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_26_n_0": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_26_n_0",
+      "fanout": 1,
+      "drivers": [
+        "u_hash/engine/input_buffer/error_reg_i_26/CO[3]"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/error_reg_i_21/CI"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/error_reg_i_26_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_21_n_0": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_21_n_0",
+      "fanout": 1,
+      "drivers": [
+        "u_hash/engine/input_buffer/error_reg_i_21/CO[3]"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/error_reg_i_16/CI"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/error_reg_i_21_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_16_n_0": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_16_n_0",
+      "fanout": 1,
+      "drivers": [
+        "u_hash/engine/input_buffer/error_reg_i_16/CO[3]"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/error_reg_i_11/CI"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/error_reg_i_16_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_11_n_0": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_11_n_0",
+      "fanout": 1,
+      "drivers": [
+        "u_hash/engine/input_buffer/error_reg_i_11/CO[3]"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/error_reg_i_6/CI"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/error_reg_i_11_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_6_n_0": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_6_n_0",
+      "fanout": 1,
+      "drivers": [
+        "u_hash/engine/input_buffer/error_reg_i_6/CO[3]"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/error_reg_i_4/CI"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/error_reg_i_6_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/error_reg_i_4_n_0": {
+      "name": "u_hash/engine/input_buffer/error_reg_i_4_n_0",
+      "fanout": 2,
+      "drivers": [
+        "u_hash/engine/input_buffer/error_reg_i_4/CO[3]"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/remaining[63]_i_8/I1"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/error_reg_i_4_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/remaining[63]_i_8_n_0": {
+      "name": "u_hash/engine/input_buffer/remaining[63]_i_8_n_0",
+      "fanout": 2,
+      "drivers": [
+        "u_hash/engine/input_buffer/remaining[63]_i_8/O"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/remaining[63]_i_4/I2"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/remaining[63]_i_8_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer_n_116": {
+      "name": "u_hash/engine/input_buffer_n_116",
+      "fanout": 66,
+      "drivers": [
+        "u_hash/engine/input_buffer/remaining[63]_i_4/O"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/remaining[63]_i_1/I1"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/s_axis_tkeep_6_sn_1",
+        "u_hash/engine/input_buffer_n_116"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    },
+    "u_hash/engine/input_buffer/remaining[63]_i_1_n_0": {
+      "name": "u_hash/engine/input_buffer/remaining[63]_i_1_n_0",
+      "fanout": 64,
+      "drivers": [
+        "u_hash/engine/input_buffer/remaining[63]_i_1/O"
+      ],
+      "sinks": [
+        "u_hash/engine/input_buffer/remaining_reg[10]/CE"
+      ],
+      "sinks_complete": false,
+      "aliases": [
+        "u_hash/engine/input_buffer/remaining[63]_i_1_n_0"
+      ],
+      "properties": {
+        "ROUTE_STATUS": "ROUTED",
+        "TYPE": "SIGNAL"
+      }
+    }
+  },
+  "reports": {
+    "setup-paths.rpt": "TIMINGLENS_PATH P00001\nSlack (VIOLATED) :        -0.011ns  (required time - arrival time)\n  Source:                 u_shell/reset_count_reg[2]/C\n                            (rising edge-triggered cell FDSE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})\n  Destination:            u_hash/engine/input_buffer/remaining_reg[10]/CE\n                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})\n  Path Group:             clk_fpga_0\n  Path Type:              Setup (Max at Slow Process Corner)\n  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)\n  Data Path Delay:        9.549ns  (logic 3.026ns (31.689%)  route 6.523ns (68.311%))\n  Logic Levels:           16  (CARRY4=8 LUT2=2 LUT4=2 LUT5=3 LUT6=1)\n  Clock Path Skew:        -0.103ns (DCD - SCD + CPR)\n    Destination Clock Delay (DCD):    2.711ns = ( 12.711 - 10.000 ) \n    Source Clock Delay      (SCD):    2.943ns\n    Clock Pessimism Removal (CPR):    0.129ns\n  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE\n    Total System Jitter     (TSJ):    0.071ns\n    Total Input Jitter      (TIJ):    0.300ns\n    Discrete Jitter          (DJ):    0.000ns\n    Phase Error              (PE):    0.000ns\n\n    Location             Delay type                Incr(ns)  Path(ns)    Partition      PBlock               Netlist Resource(s)\n  -------------------------------------------------------------------    -------------------------------------------------------\n                         (clock clk_fpga_0 rise edge)\n                                                      0.000     0.000 r                                      \n    PS7_X0Y0             PS7                          0.000     0.000 r  static                              u_ps_dma/ps_dma_i/ps7/inst/PS7_i/FCLKCLK[0]\n                         net (fo=1, routed)           1.193     1.193    static                              u_ps_dma/ps_dma_i/ps7/inst/FCLK_CLK_unbuffered[0]\n    BUFGCTRL_X0Y16                                                    r  static                              u_ps_dma/ps_dma_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/I\n    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  static                              u_ps_dma/ps_dma_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O\n                         net (fo=6737, routed)        1.649     2.943    static                              u_shell/aclk\n    SLICE_X48Y58         FDSE                                         r  static                              u_shell/reset_count_reg[2]/C\n  -------------------------------------------------------------------    -------------------------------------------------------\n    SLICE_X48Y58         FDSE (Prop_fdse_C_Q)         0.456     3.399 f  static                              u_shell/reset_count_reg[2]/Q\n                         net (fo=4, routed)           0.870     4.269    static                              u_shell/reset_count_reg_n_0_[2]\n    SLICE_X49Y58                                                      f  static                              u_shell/rp_resetn_INST_0/I1\n    SLICE_X49Y58         LUT5 (Prop_lut5_I1_O)        0.124     4.393 r  static                              u_shell/rp_resetn_INST_0/O\n                         net (fo=179, routed)         1.052     5.445    static                              u_shell/rp_resetn\n    SLICE_X49Y55                                                      r  static                              u_shell/rp_tkeep[7]_INST_0/I1\n    SLICE_X49Y55         LUT2 (Prop_lut2_I1_O)        0.152     5.597 r  static                              u_shell/rp_tkeep[7]_INST_0/O\n                         net (fo=4, routed)           1.058     6.655    boundary                            u_hash/engine/input_buffer/s_axis_tkeep[7]\n    SLICE_X51Y58                                                      r  reconfigurable pblock_hash          u_hash/engine/input_buffer/count_q[3]_i_6/I4\n    SLICE_X51Y58         LUT5 (Prop_lut5_I4_O)        0.326     6.981 r  reconfigurable pblock_hash          u_hash/engine/input_buffer/count_q[3]_i_6/O\n                         net (fo=2, routed)           0.729     7.710    reconfigurable                      u_hash/engine/input_buffer/count_q[3]_i_6_n_0\n    SLICE_X51Y57                                                      r  reconfigurable pblock_hash          u_hash/engine/input_buffer/count_q[3]_i_5/I0\n    SLICE_X51Y57         LUT6 (Prop_lut6_I0_O)        0.124     7.834 r  reconfigurable pblock_hash          u_hash/engine/input_buffer/count_q[3]_i_5/O\n                         net (fo=5, routed)           0.601     8.435    reconfigurable                      u_hash/engine/input_buffer/p_0_in[3]\n    SLICE_X53Y56                                                      r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_i_45/I1\n    SLICE_X53Y56         LUT4 (Prop_lut4_I1_O)        0.124     8.559 r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_i_45/O\n                         net (fo=1, routed)           0.000     8.559    reconfigurable                      u_hash/engine/input_buffer/error_i_45_n_0\n    SLICE_X53Y56                                                      r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_36/S[1]\n    SLICE_X53Y56         CARRY4 (Prop_carry4_S[1]_CO[3])\n                                                      0.550     9.109 r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_36/CO[3]\n                         net (fo=1, routed)           0.000     9.109    reconfigurable                      u_hash/engine/input_buffer/error_reg_i_36_n_0\n    SLICE_X53Y57                                                      r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_31/CI\n    SLICE_X53Y57         CARRY4 (Prop_carry4_CI_CO[3])\n                                                      0.114     9.223 r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_31/CO[3]\n                         net (fo=1, routed)           0.000     9.223    reconfigurable                      u_hash/engine/input_buffer/error_reg_i_31_n_0\n    SLICE_X53Y58                                                      r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_26/CI\n    SLICE_X53Y58         CARRY4 (Prop_carry4_CI_CO[3])\n                                                      0.114     9.337 r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_26/CO[3]\n                         net (fo=1, routed)           0.000     9.337    reconfigurable                      u_hash/engine/input_buffer/error_reg_i_26_n_0\n    SLICE_X53Y59                                                      r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_21/CI\n    SLICE_X53Y59         CARRY4 (Prop_carry4_CI_CO[3])\n                                                      0.114     9.451 r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_21/CO[3]\n                         net (fo=1, routed)           0.000     9.451    reconfigurable                      u_hash/engine/input_buffer/error_reg_i_21_n_0\n    SLICE_X53Y60                                                      r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_16/CI\n    SLICE_X53Y60         CARRY4 (Prop_carry4_CI_CO[3])\n                                                      0.114     9.565 r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_16/CO[3]\n                         net (fo=1, routed)           0.000     9.565    reconfigurable                      u_hash/engine/input_buffer/error_reg_i_16_n_0\n    SLICE_X53Y61                                                      r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_11/CI\n    SLICE_X53Y61         CARRY4 (Prop_carry4_CI_CO[3])\n                                                      0.114     9.679 r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_11/CO[3]\n                         net (fo=1, routed)           0.000     9.679    reconfigurable                      u_hash/engine/input_buffer/error_reg_i_11_n_0\n    SLICE_X53Y62                                                      r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_6/CI\n    SLICE_X53Y62         CARRY4 (Prop_carry4_CI_CO[3])\n                                                      0.114     9.793 r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_6/CO[3]\n                         net (fo=1, routed)           0.000     9.793    reconfigurable                      u_hash/engine/input_buffer/error_reg_i_6_n_0\n    SLICE_X53Y63                                                      r  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_4/CI\n    SLICE_X53Y63         CARRY4 (Prop_carry4_CI_CO[3])\n                                                      0.114     9.907 f  reconfigurable pblock_hash          u_hash/engine/input_buffer/error_reg_i_4/CO[3]\n                         net (fo=2, routed)           0.861    10.769    reconfigurable                      u_hash/engine/input_buffer/error_reg_i_4_n_0\n    SLICE_X54Y62                                                      f  reconfigurable pblock_hash          u_hash/engine/input_buffer/remaining[63]_i_8/I1\n    SLICE_X54Y62         LUT5 (Prop_lut5_I1_O)        0.124    10.893 f  reconfigurable pblock_hash          u_hash/engine/input_buffer/remaining[63]_i_8/O\n                         net (fo=2, routed)           0.434    11.327    reconfigurable                      u_hash/engine/input_buffer/remaining[63]_i_8_n_0\n    SLICE_X54Y62                                                      f  reconfigurable pblock_hash          u_hash/engine/input_buffer/remaining[63]_i_4/I2\n    SLICE_X54Y62         LUT4 (Prop_lut4_I2_O)        0.124    11.451 f  reconfigurable pblock_hash          u_hash/engine/input_buffer/remaining[63]_i_4/O\n                         net (fo=66, routed)          0.355    11.806    reconfigurable                      u_hash/engine/input_buffer/s_axis_tkeep_6_sn_1\n    SLICE_X54Y63                                                      f  reconfigurable pblock_hash          u_hash/engine/input_buffer/remaining[63]_i_1/I1\n    SLICE_X54Y63         LUT2 (Prop_lut2_I1_O)        0.124    11.930 r  reconfigurable pblock_hash          u_hash/engine/input_buffer/remaining[63]_i_1/O\n                         net (fo=64, routed)          0.562    12.492    reconfigurable                      u_hash/engine/input_buffer/remaining[63]_i_1_n_0\n    SLICE_X57Y63         FDRE                                         r  reconfigurable pblock_hash          u_hash/engine/input_buffer/remaining_reg[10]/CE\n  -------------------------------------------------------------------    -------------------------------------------------------\n\n                         (clock clk_fpga_0 rise edge)\n                                                     10.000    10.000 r                                      \n    PS7_X0Y0             PS7                          0.000    10.000 r  static                              u_ps_dma/ps_dma_i/ps7/inst/PS7_i/FCLKCLK[0]\n                         net (fo=1, routed)           1.088    11.088    static                              u_ps_dma/ps_dma_i/ps7/inst/FCLK_CLK_unbuffered[0]\n    BUFGCTRL_X0Y16                                                    r  static                              u_ps_dma/ps_dma_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/I\n    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  static                              u_ps_dma/ps_dma_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O\n                         net (fo=6737, routed)        1.532    12.711    boundary                            u_hash/engine/input_buffer/aclk\n    SLICE_X57Y63         FDRE                                         r  reconfigurable pblock_hash          u_hash/engine/input_buffer/remaining_reg[10]/C\n                         clock pessimism              0.129    12.840                                            \n                         clock uncertainty           -0.154    12.686                                            \n    SLICE_X57Y63         FDRE (Setup_fdre_C_CE)      -0.205    12.481    reconfigurable   pblock_hash            u_hash/engine/input_buffer/remaining_reg[10]\n  -------------------------------------------------------------------\n                         required time                         12.481                                            \n                         arrival time                         -12.492                                            \n  -------------------------------------------------------------------\n                         slack                                 -0.011                                            \n\n\n\n\n\n"
+  },
+  "sources": [
+    {
+      "path": "rtl/common/axis_bytes.sv",
+      "file_type": "",
+      "sha256": "d32447f0000b5a4cdfa4137d5cdfcedc413ec6b3d633425903569adf59d218b4",
+      "text": "// SPDX-License-Identifier: MIT\n// One-beat elastic input buffer. Byte zero is always the earliest byte.\nmodule axis_bytes (\n    input  logic aclk, aresetn, start,\n    input  logic [63:0] message_length,\n    input  logic [63:0] s_axis_tdata,\n    input  logic [7:0] s_axis_tkeep,\n    input  logic s_axis_tvalid, s_axis_tlast,\n    output logic s_axis_tready,\n    output logic [7:0] byte_data,\n    output logic byte_valid, byte_last,\n    input  logic byte_ready,\n    output logic error\n);\n    logic [63:0] data_q, remaining;\n    logic [3:0] count_q;\n    logic final_q, active;\n    logic [3:0] incoming_count;\n    logic keep_ok;\n\n    always_comb begin\n        incoming_count = 0;\n        for (int i=0; i<8; i++) incoming_count += {3'b0,s_axis_tkeep[i]};\n        keep_ok = (s_axis_tkeep != 0) &&\n                  ((s_axis_tkeep & (s_axis_tkeep + 8'd1)) == 0);\n    end\n    assign s_axis_tready = aresetn && active && !error && (count_q == 0);\n    assign byte_data = data_q[7:0];\n    assign byte_valid = aresetn && !error && (count_q != 0);\n    assign byte_last = final_q && (count_q == 1);\n\n    always_ff @(posedge aclk) begin\n        if (!aresetn) begin\n            data_q <= 0; remaining <= 0; count_q <= 0;\n            final_q <= 0; active <= 0; error <= 0;\n        end else if (start) begin\n            data_q <= 0; count_q <= 0; final_q <= 0; error <= 0;\n            remaining <= message_length;\n            active <= (message_length != 0);\n        end else begin\n            if (byte_valid && byte_ready) begin\n                data_q <= data_q >> 8;\n                count_q <= count_q - 1'b1;\n            end\n            if (s_axis_tvalid && s_axis_tready) begin\n                if (!keep_ok || {60'd0,incoming_count} > remaining ||\n                    s_axis_tlast != ({60'd0,incoming_count} == remaining)) begin\n                    error <= 1; active <= 0; count_q <= 0;\n                end else begin\n                    data_q <= s_axis_tdata; count_q <= incoming_count;\n                    remaining <= remaining - {60'd0,incoming_count};\n                    final_q <= s_axis_tlast;\n                    if (s_axis_tlast) active <= 0;\n                end\n            end\n        end\n    end\nendmodule\n"
+    },
+    {
+      "path": "rtl/static/hash_shell.sv",
+      "file_type": "",
+      "sha256": "bb193cf6ecc1fac5b60390de01b80a42b022948acd409991fa0e27d20ec9f470",
+      "text": "// SPDX-License-Identifier: MIT\n// Static control, DMA-to-file framing and DFX boundary isolation.\nmodule hash_shell (\n    input logic aclk, aresetn,\n    input logic [31:0] s_axi_awaddr,\n    input logic [2:0] s_axi_awprot,\n    input logic s_axi_awvalid,\n    output logic s_axi_awready,\n    input logic [31:0] s_axi_wdata,\n    input logic [3:0] s_axi_wstrb,\n    input logic s_axi_wvalid,\n    output logic s_axi_wready,\n    output logic [1:0] s_axi_bresp,\n    output logic s_axi_bvalid,\n    input logic s_axi_bready,\n    input logic [31:0] s_axi_araddr,\n    input logic [2:0] s_axi_arprot,\n    input logic s_axi_arvalid,\n    output logic s_axi_arready,\n    output logic [31:0] s_axi_rdata,\n    output logic [1:0] s_axi_rresp,\n    output logic s_axi_rvalid,\n    input logic s_axi_rready,\n    input logic [63:0] s_axis_tdata,\n    input logic [7:0] s_axis_tkeep,\n    input logic s_axis_tvalid, s_axis_tlast,\n    output logic s_axis_tready,\n    output logic irq,\n    output logic rp_start, rp_resetn,\n    output logic [63:0] rp_message_length, rp_tdata,\n    output logic [7:0] rp_tkeep,\n    output logic rp_tvalid, rp_tlast, rp_digest_ready,\n    input logic rp_tready, rp_busy, rp_digest_valid, rp_error,\n    input logic [255:0] rp_digest,\n    input logic [31:0] rp_algorithm_id\n);\n    localparam logic [31:0] ABI_VERSION = 32'h00010000;\n    localparam logic [31:0] ERR_KEEP=1, ERR_LENGTH=2, ERR_ENGINE=3,\n        ERR_CONTROL=4, ERR_ABORT=5, ERR_ISOLATED=6;\n    logic isolated, active, done_q, error_q, start_q;\n    logic [2:0] reset_count;\n    logic [63:0] length_q, accepted_q, remaining_q, cycles_q;\n    logic [255:0] digest_q;\n    logic [31:0] error_code;\n    logic aw_pending, w_pending;\n    logic [11:0] awaddr_q;\n    logic [31:0] wdata_q;\n    logic [3:0] wstrb_q;\n    logic [3:0] beat_bytes;\n    logic keep_ok, beat_ok, engine_ready;\n\n    function automatic logic [31:0] merge_bytes(\n        input logic [31:0] old_value, new_value,\n        input logic [3:0] strobes\n    );\n        for (int i=0;i<4;i++)\n            merge_bytes[i*8+:8] = strobes[i] ? new_value[i*8+:8] : old_value[i*8+:8];\n    endfunction\n\n    always_comb begin\n        beat_bytes = 0;\n        for (int i=0;i<8;i++) beat_bytes += {3'b0,s_axis_tkeep[i]};\n        keep_ok = (s_axis_tkeep != 0) &&\n                  ((s_axis_tkeep & (s_axis_tkeep + 8'd1)) == 0);\n        // Keep the 64-bit subtract in a local registered counter. Only a small\n        // compare/reduction crosses the DFX boundary in the handshake path.\n        beat_ok = keep_ok && ((|remaining_q[63:4]) || remaining_q[3:0] >= beat_bytes);\n    end\n\n    assign rp_resetn = aresetn && !isolated && (reset_count == 0);\n    assign rp_start = start_q && rp_resetn;\n    assign rp_message_length = rp_resetn ? length_q : 64'd0;\n    assign rp_tdata = rp_resetn ? s_axis_tdata : 64'd0;\n    assign rp_tkeep = rp_resetn ? s_axis_tkeep : 8'd0;\n    assign rp_tvalid = rp_resetn && active && !start_q &&\n                      (remaining_q != 0) && s_axis_tvalid && beat_ok;\n    assign rp_tlast = rp_tvalid && !(|remaining_q[63:4]) && (beat_bytes == remaining_q[3:0]);\n    assign s_axis_tready = rp_resetn && active && !start_q &&\n                          (remaining_q != 0) &&\n                          ((s_axis_tvalid && !beat_ok) || rp_tready);\n    assign rp_digest_ready = rp_resetn && active && !start_q;\n    assign engine_ready = rp_resetn && !active && !rp_busy && !rp_digest_valid;\n    assign irq = done_q || error_q;\n\n    assign s_axi_awready = aresetn && !aw_pending && !s_axi_bvalid;\n    assign s_axi_wready = aresetn && !w_pending && !s_axi_bvalid;\n    assign s_axi_arready = aresetn && !s_axi_rvalid;\n\n    always_ff @(posedge aclk) begin\n        if (!aresetn) begin\n            isolated <= 1; active <= 0; done_q <= 0; error_q <= 0; start_q <= 0;\n            reset_count <= 4; length_q <= 0; accepted_q <= 0; remaining_q <= 0; cycles_q <= 0;\n            digest_q <= 0; error_code <= 0;\n            aw_pending <= 0; w_pending <= 0; awaddr_q <= 0; wdata_q <= 0; wstrb_q <= 0;\n            s_axi_bresp <= 0; s_axi_bvalid <= 0;\n            s_axi_rresp <= 0; s_axi_rvalid <= 0; s_axi_rdata <= 0;\n        end else begin\n            start_q <= 0;\n            if (isolated) reset_count <= 4;\n            else if (reset_count != 0) reset_count <= reset_count - 1'b1;\n            if (active) cycles_q <= cycles_q + 1'b1;\n\n            if (s_axis_tvalid && s_axis_tready) begin\n                if (!beat_ok) begin\n                    active <= 0; error_q <= 1; reset_count <= 4;\n                    error_code <= keep_ok ? ERR_LENGTH : ERR_KEEP;\n                end else begin\n                    accepted_q <= accepted_q + {60'd0,beat_bytes};\n                    remaining_q <= remaining_q - {60'd0,beat_bytes};\n                end\n            end\n            if (active && rp_resetn && !start_q) begin\n                if (rp_error) begin\n                    active <= 0; error_q <= 1; error_code <= ERR_ENGINE; reset_count <= 4;\n                end else if (rp_digest_valid) begin\n                    active <= 0;\n                    if (remaining_q == 0) begin\n                        digest_q <= rp_digest; done_q <= 1;\n                    end else begin\n                        error_q <= 1; error_code <= ERR_LENGTH; reset_count <= 4;\n                    end\n                end\n            end\n\n            if (s_axi_awvalid && s_axi_awready) begin\n                awaddr_q <= s_axi_awaddr[11:0]; aw_pending <= 1;\n            end\n            if (s_axi_wvalid && s_axi_wready) begin\n                wdata_q <= s_axi_wdata; wstrb_q <= s_axi_wstrb; w_pending <= 1;\n            end\n            if (s_axi_bvalid && s_axi_bready) s_axi_bvalid <= 0;\n            if (aw_pending && w_pending && !s_axi_bvalid) begin\n                aw_pending <= 0; w_pending <= 0;\n                s_axi_bvalid <= 1; s_axi_bresp <= 0;\n                case (awaddr_q[11:0])\n                    12'h000: if (wstrb_q[0]) begin\n                        // ISOLATE is a retained bit; all other control bits are pulses.\n                        isolated <= wdata_q[2];\n                        if (wdata_q[3]) begin\n                            done_q <= 0; error_q <= 0; error_code <= 0;\n                        end\n                        if (wdata_q[2] && active) begin\n                            active <= 0; error_q <= 1; error_code <= ERR_ISOLATED;\n                            reset_count <= 4;\n                        end\n                        if (wdata_q[1]) begin\n                            active <= 0; done_q <= 0; error_q <= 1;\n                            error_code <= ERR_ABORT; reset_count <= 4;\n                        end\n                        if (wdata_q[0]) begin\n                            if (!engine_ready || wdata_q[2] || wdata_q[1] ||\n                                (rp_algorithm_id == 2 && |length_q[63:61])) begin\n                                error_q <= 1; error_code <= ERR_CONTROL; s_axi_bresp <= 2;\n                            end else begin\n                                active <= 1; start_q <= 1; done_q <= 0; error_q <= 0;\n                                accepted_q <= 0; remaining_q <= length_q;\n                                cycles_q <= 0; digest_q <= 0; error_code <= 0;\n                            end\n                        end\n                    end\n                    12'h010: begin\n                        if (active) s_axi_bresp <= 2;\n                        else length_q[31:0] <= merge_bytes(length_q[31:0],wdata_q,wstrb_q);\n                    end\n                    12'h014: begin\n                        if (active) s_axi_bresp <= 2;\n                        else length_q[63:32] <= merge_bytes(length_q[63:32],wdata_q,wstrb_q);\n                    end\n                    default: s_axi_bresp <= 2;\n                endcase\n            end\n\n            if (s_axi_rvalid && s_axi_rready) s_axi_rvalid <= 0;\n            if (s_axi_arvalid && s_axi_arready) begin\n                s_axi_rvalid <= 1; s_axi_rresp <= 0;\n                case (s_axi_araddr[11:0])\n                    12'h000: s_axi_rdata <= {29'd0,isolated,2'd0};\n                    12'h004: s_axi_rdata <= {27'd0,engine_ready,isolated,error_q,done_q,active};\n                    12'h008: s_axi_rdata <= rp_resetn ? rp_algorithm_id : 32'd0;\n                    12'h00c: s_axi_rdata <= ABI_VERSION;\n                    12'h010: s_axi_rdata <= length_q[31:0];\n                    12'h014: s_axi_rdata <= length_q[63:32];\n                    12'h018: s_axi_rdata <= accepted_q[31:0];\n                    12'h01c: s_axi_rdata <= accepted_q[63:32];\n                    12'h020,12'h024,12'h028,12'h02c,\n                    12'h030,12'h034,12'h038,12'h03c:\n                        s_axi_rdata <= digest_q[s_axi_araddr[4:2]*32+:32];\n                    12'h040: s_axi_rdata <= cycles_q[31:0];\n                    12'h044: s_axi_rdata <= cycles_q[63:32];\n                    12'h048: s_axi_rdata <= error_code;\n                    default: begin s_axi_rdata <= 0; s_axi_rresp <= 2; end\n                endcase\n            end\n        end\n    end\n\n    // DMA TLAST is intentionally not used to end a file. AXI PROT has no\n    // permission interpretation in this peripheral; PS address protection is external.\n    logic unused_inputs;\n    assign unused_inputs = ^{s_axis_tlast,s_axi_awprot,s_axi_arprot,\n                             s_axi_awaddr[31:12],s_axi_araddr[31:12]};\nendmodule\n"
+    }
+  ]
+}

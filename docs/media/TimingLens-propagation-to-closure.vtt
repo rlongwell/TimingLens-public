@@ -1,0 +1,266 @@
+WEBVTT
+
+1
+00:00:00.440 --> 00:00:02.360
+A clock edge launches a change.
+
+2
+00:00:02.760 --> 00:00:05.620
+It travels through logic
+cells and along a routed wire.
+
+3
+00:00:06.000 --> 00:00:09.400
+The next register needs a stable
+input just before it samples.
+
+4
+00:00:09.680 --> 00:00:11.020
+That's the setup deadline.
+
+5
+00:00:11.500 --> 00:00:13.020
+This change settles early.
+
+6
+00:00:13.340 --> 00:00:15.280
+The time left is positive slack.
+
+7
+00:00:15.860 --> 00:00:18.160
+Send the same transition
+down a longer wire.
+
+8
+00:00:18.460 --> 00:00:20.160
+Now it misses the deadline.
+
+9
+00:00:20.460 --> 00:00:21.720
+The slack is negative.
+
+10
+00:00:22.220 --> 00:00:23.180
+Where did the time go?
+
+11
+00:00:23.900 --> 00:00:26.170
+TimingLens opens a routed Vivado capture
+
+12
+00:00:26.180 --> 00:00:28.780
+and groups failing paths
+that share a cause.
+
+13
+00:00:29.160 --> 00:00:32.720
+Here, one control signal drives 192 loads.
+
+14
+00:00:33.200 --> 00:00:34.720
+Follow the branch to this lane.
+
+15
+00:00:35.180 --> 00:00:37.620
+The launch cell takes less
+than half a nanosecond.
+
+16
+00:00:37.860 --> 00:00:39.540
+The wire takes 2.4 ns.
+
+17
+00:00:39.860 --> 00:00:42.010
+The destination register has a source tag
+
+18
+00:00:42.020 --> 00:00:45.540
+so we can see exactly which
+line of code uses that control.
+
+19
+00:00:45.980 --> 00:00:48.740
+That slow wire suggests
+a routing experiment.
+
+20
+00:00:49.240 --> 00:00:52.200
+Try fanout optimization on
+a copy of the placed design,
+
+21
+00:00:52.340 --> 00:00:53.440
+then route it again.
+
+22
+00:00:53.940 --> 00:00:57.030
+For a deep logic path,
+try balancing a priority selector
+
+23
+00:00:57.040 --> 00:01:00.640
+or spreading arithmetic across
+stages already in the pipeline.
+
+24
+00:01:01.040 --> 00:01:02.500
+If lookup tables are scarce,
+
+25
+00:01:02.700 --> 00:01:06.260
+a supported multiplier can
+move into dedicated DSP blocks.
+
+26
+00:01:06.960 --> 00:01:08.790
+TimingLens can try supported changes
+
+27
+00:01:08.800 --> 00:01:10.680
+in an isolated project copy.
+
+28
+00:01:11.100 --> 00:01:14.380
+Experiment Lab compares setup,
+hold, and resource use,
+
+29
+00:01:14.540 --> 00:01:17.020
+so a regression is
+visible alongside a gain.
+
+30
+00:01:17.500 --> 00:01:21.060
+Now take a countdown
+timer targeting 250 MHz.
+
+31
+00:01:21.200 --> 00:01:23.180
+That's four nanoseconds per cycle.
+
+32
+00:01:23.520 --> 00:01:25.570
+The timer subtracts an accepted request
+
+33
+00:01:25.580 --> 00:01:27.560
+only when there's enough count left.
+
+34
+00:01:28.040 --> 00:01:29.920
+Follow the worst path to its endpoint.
+
+35
+00:01:30.300 --> 00:01:31.200
+It's the clock enable.
+
+36
+00:01:31.820 --> 00:01:35.680
+The decision to subtract
+arrives 633 ps late.
+
+37
+00:01:36.140 --> 00:01:37.740
+Here's the change in the RTL.
+
+38
+00:01:38.100 --> 00:01:40.200
+The subtraction stays on the same line.
+
+39
+00:01:40.500 --> 00:01:41.800
+It's the guard that changes.
+
+40
+00:01:42.380 --> 00:01:44.570
+Originally, the full 32-bit count
+
+41
+00:01:44.580 --> 00:01:47.220
+is compared with an unsigned
+4-bit request.
+
+42
+00:01:47.680 --> 00:01:50.440
+That answer combines
+with accept to drive the enable.
+
+43
+00:01:50.860 --> 00:01:53.300
+The routed path crosses four carry blocks.
+
+44
+00:01:53.600 --> 00:01:56.180
+The rewrite asks two
+questions in parallel.
+
+45
+00:01:56.580 --> 00:01:57.940
+Is any upper bit set?
+
+46
+00:01:58.260 --> 00:02:00.880
+And are the low four bits
+at least the request?
+
+47
+00:02:01.340 --> 00:02:03.640
+Either answer is enough
+when accept is high.
+
+48
+00:02:04.180 --> 00:02:06.460
+Take 20 remaining and a request for 12.
+
+49
+00:02:06.840 --> 00:02:08.680
+The low bits of 20 say four.
+
+50
+00:02:08.920 --> 00:02:10.240
+Four is too small.
+
+51
+00:02:10.500 --> 00:02:13.380
+But the upper bit tells us
+the count is at least 16.
+
+52
+00:02:13.860 --> 00:02:15.680
+Every four-bit request fits.
+
+53
+00:02:16.040 --> 00:02:18.980
+On the very same clock
+edge, 20 becomes eight.
+
+54
+00:02:19.380 --> 00:02:22.100
+Both versions passed
+the same countdown test.
+
+55
+00:02:22.440 --> 00:02:25.450
+The two builds use
+the same 4 ns constraint
+
+56
+00:02:25.460 --> 00:02:27.220
+and the same Default recipe.
+
+57
+00:02:28.200 --> 00:02:31.250
+Worst setup slack went from −0.633 ns
+
+58
+00:02:31.260 --> 00:02:35.040
+to +0.407 ns.
+
+59
+00:02:35.060 --> 00:02:37.940
+32 failing setup
+endpoints dropped to zero.
+
+60
+00:02:38.400 --> 00:02:41.970
+The standalone timer now meets 250 MHz.

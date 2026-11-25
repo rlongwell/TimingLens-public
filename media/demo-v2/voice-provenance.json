@@ -1,0 +1,11 @@
+{
+  "provider": "ElevenLabs",
+  "model": "Eleven v4",
+  "voice": "Jarnathan - Confident and Versatile",
+  "stability": 0.62,
+  "similarity": 0.75,
+  "clone_strength": 0,
+  "selection": "User explicitly confirmed keeping the current voice; original accepted take reused unchanged",
+  "download": "ElevenLabs_2026-11-17T05_50_38_Jarnathan - Confident and Versatile_pvc_s62_sim75_v4.mp3",
+  "script": "narration-tts.txt"
+}

@@ -1,0 +1,42 @@
+{
+  "duration_s": 280.5,
+  "decoded_frames": 8415,
+  "decoded_audio_samples": 13464000,
+  "chapters": 13,
+  "encoded_lufs": "-16.02",
+  "encoded_dbtp": "-3.18",
+  "aac_matches_transcribed_mix": true,
+  "music": {
+    "music_quietest_interior_second_dbfs": -51.586334228515625,
+    "speech_end_seconds": 272.85372916666665,
+    "body_speed": 0.96,
+    "body_start": 67.5
+  },
+  "sha256": "b27cb65eb383a0247936d5e591f2ba10c378ac02544ab1df03f718e630219276",
+  "verified_metrics": {
+    "setup.worst_slack_ns": [
+      -0.633,
+      0.407
+    ],
+    "setup.failing_endpoints": [
+      32,
+      0
+    ],
+    "area.lut_sites": [
+      50,
+      41
+    ],
+    "area.ff": [
+      32,
+      32
+    ],
+    "hold.failing_endpoints": [
+      0,
+      0
+    ],
+    "pulse.failing": [
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "job": "work/demo-video-v5/runs/counter32_250-20261117T092729Z-b24fadcc",
+  "job_status": "completed",
+  "metrics": {
+    "setup.worst_slack_ns": [
+      -0.633,
+      0.407
+    ],
+    "setup.total_negative_slack_ns": [
+      -13.201,
+      0
+    ],
+    "setup.failing_endpoints": [
+      32,
+      0
+    ],
+    "hold.worst_slack_ns": [
+      0.08,
+      0.095
+    ],
+    "hold.failing_endpoints": [
+      0,
+      0
+    ],
+    "pulse.failing": [
+      0,
+      0
+    ],
+    "area.lut_sites": [
+      50,
+      41
+    ],
+    "area.ff": [
+      32,
+      32
+    ],
+    "drc.errors": [
+      0,
+      0
+    ],
+    "drc.critical": [
+      0,
+      0
+    ],
+    "route.unrouted": [
+      0,
+      0
+    ],
+    "route.errors": [
+      0,
+      0
+    ]
+  },
+  "gates": {
+    "Comparison context": "passed",
+    "Routed implementation": "passed",
+    "Setup timing": "passed",
+    "Hold timing": "passed",
+    "Pulse width": "passed",
+    "Routing": "passed",
+    "DRC": "passed",
+    "Embedded source byte verification": "passed",
+    "Scoped functional validation": "passed",
+    "Source/checkpoint correspondence": "passed",
+    "DFX compatibility": "not_applicable",
+    "Integrated design validation": "not_tested",
+    "Regression guard": "passed"
+  },
+  "constraints_sha256": "8aec164025f69e1d235d502292384a17d5f907d8e359ad19d4ab0ab5814372da",
+  "clock_period_ns": 4,
+  "recipe": "Default, identical baseline/candidate scripts",
+  "validation": "10289 finite oracle cycles, not formal equivalence",
+  "population": "Full standalone core / global OOC; integration untested",
+  "register_subset_note": "Register hold WNS decreases 0.295 to 0.294 ns with zero failures. Register comparison retains regression/blocked status. Full OOC worst hold improves 0.080 to 0.095 ns. Both comparisons preserved.",
+  "v3_preserved_sha256": "23cbe3180e97453c429f43dbd3479dd1da7ce39699305115d43c0de45f6be099",
+  "build_seconds": [
+    {
+      "phase": "tool checks",
+      "seconds": 1.421
+    },
+    {
+      "phase": "tool checks",
+      "seconds": 0.058
+    },
+    {
+      "phase": "simulation build",
+      "seconds": 10.275
+    },
+    {
+      "phase": "simulation",
+      "seconds": 0.008
+    },
+    {
+      "phase": "baseline implementation",
+      "seconds": 116.946
+    },
+    {
+      "phase": "candidate implementation",
+      "seconds": 128.869
+    }
+  ],
+  "board_or_hash_work": "No board APIs, programming, serial access, active hash-project modifications or bitstreams used.",
+  "v4_preserved_sha256": "897dd2f5ca819b0bf50acd9c518c0e7aa771bacb081ae616966a890c1aba82f5",
+  "portable_comparison_reopened": true,
+  "frozen_input_hashes_verified": 11,
+  "priority_sweep_source": "work/demo-video-v3/runs/priority-20261117T075301Z-f86a82d7",
+  "priority_sweep_sha256": "bdb11c78b382cae3f5d2dcba74deeb15a33a8c2bf68e931b21d2d90dd1120584",
+  "priority": {
+    "all_three_scoped_proofs_and_simulations_validated_on_import": true,
+    "register_setup_wns_ns": [
+      -5.515,
+      -1.336
+    ],
+    "register_gain_ns": 4.179,
+    "logical_luts": [
+      16,
+      26
+    ],
+    "design_setup_wns_ns": [
+      -8.149,
+      -8.149
+    ],
+    "design_setup_tns_ns": [
+      -32.939,
+      -42.617
+    ],
+    "acceptance": "blocked"
+  }
+}

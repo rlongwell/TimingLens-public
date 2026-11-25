@@ -1,0 +1,242 @@
+[
+  {
+    "project": "iq_power",
+    "fix": "Pipeline the arithmetic in energy across its 4 existing cycles",
+    "baseline": {
+      "setup": {
+        "worst_slack_ns": -1.945,
+        "total_negative_slack_ns": -1956.759,
+        "failing_endpoints": 1152,
+        "total_endpoints": 54624
+      },
+      "hold": {
+        "worst_slack_ns": 0.023,
+        "total_negative_slack_ns": 0.0,
+        "failing_endpoints": 0,
+        "total_endpoints": 54624
+      },
+      "pulse_slack": 3.5,
+      "drc_warnings": 433,
+      "slices": {
+        "used": 11141,
+        "available": 13300,
+        "percent": 83.77
+      },
+      "luts": {
+        "used": 24412,
+        "available": 53200,
+        "percent": 45.89
+      },
+      "ram": {
+        "used": 72,
+        "available": 140,
+        "percent": 51.43
+      },
+      "dsps": {
+        "used": 216,
+        "available": 220,
+        "percent": 98.18
+      },
+      "transactions": 18432
+    },
+    "candidate": {
+      "setup": {
+        "worst_slack_ns": 0.935,
+        "total_negative_slack_ns": 0.0,
+        "failing_endpoints": 0,
+        "total_endpoints": 61536
+      },
+      "hold": {
+        "worst_slack_ns": 0.015,
+        "total_negative_slack_ns": 0.0,
+        "failing_endpoints": 0,
+        "total_endpoints": 61536
+      },
+      "pulse_slack": 3.02,
+      "drc_warnings": 145,
+      "slices": {
+        "used": 10752,
+        "available": 13300,
+        "percent": 80.84
+      },
+      "luts": {
+        "used": 24988,
+        "available": 53200,
+        "percent": 46.97
+      },
+      "ram": {
+        "used": 72,
+        "available": 140,
+        "percent": 51.43
+      },
+      "dsps": {
+        "used": 216,
+        "available": 220,
+        "percent": 98.18
+      },
+      "transactions": 18432
+    },
+    "dsp_pipelining_warnings": {}
+  },
+  {
+    "project": "tone_curve",
+    "fix": "Pipeline the arithmetic in curve across its 5 existing cycles",
+    "baseline": {
+      "setup": {
+        "worst_slack_ns": -9.725,
+        "total_negative_slack_ns": -26116.531,
+        "failing_endpoints": 3328,
+        "total_endpoints": 63592
+      },
+      "hold": {
+        "worst_slack_ns": 0.012,
+        "total_negative_slack_ns": 0.0,
+        "failing_endpoints": 0,
+        "total_endpoints": 63592
+      },
+      "pulse_slack": 3.02,
+      "drc_warnings": 1869,
+      "slices": {
+        "used": 11596,
+        "available": 13300,
+        "percent": 87.19
+      },
+      "luts": {
+        "used": 35364,
+        "available": 53200,
+        "percent": 66.47
+      },
+      "ram": {
+        "used": 104,
+        "available": 140,
+        "percent": 74.29
+      },
+      "dsps": {
+        "used": 208,
+        "available": 220,
+        "percent": 94.55
+      },
+      "transactions": 26624
+    },
+    "candidate": {
+      "setup": {
+        "worst_slack_ns": 1.952,
+        "total_negative_slack_ns": 0.0,
+        "failing_endpoints": 0,
+        "total_endpoints": 68792
+      },
+      "hold": {
+        "worst_slack_ns": 0.02,
+        "total_negative_slack_ns": 0.0,
+        "failing_endpoints": 0,
+        "total_endpoints": 68792
+      },
+      "pulse_slack": 3.02,
+      "drc_warnings": 1517,
+      "slices": {
+        "used": 11609,
+        "available": 13300,
+        "percent": 87.29
+      },
+      "luts": {
+        "used": 34740,
+        "available": 53200,
+        "percent": 65.3
+      },
+      "ram": {
+        "used": 104,
+        "available": 140,
+        "percent": 74.29
+      },
+      "dsps": {
+        "used": 208,
+        "available": 220,
+        "percent": 94.55
+      },
+      "transactions": 26624
+    },
+    "dsp_pipelining_warnings": {}
+  },
+  {
+    "project": "pixel_gain",
+    "fix": "Map gain_tile/gain_product to DSP blocks",
+    "baseline": {
+      "setup": {
+        "worst_slack_ns": -1.004,
+        "total_negative_slack_ns": -423.774,
+        "failing_endpoints": 1462,
+        "total_endpoints": 19318
+      },
+      "hold": {
+        "worst_slack_ns": 0.022,
+        "total_negative_slack_ns": 0.0,
+        "failing_endpoints": 0,
+        "total_endpoints": 19318
+      },
+      "pulse_slack": 3.5,
+      "drc_warnings": 103,
+      "slices": {
+        "used": 12146,
+        "available": 13300,
+        "percent": 91.32
+      },
+      "luts": {
+        "used": 39980,
+        "available": 53200,
+        "percent": 75.15
+      },
+      "ram": {
+        "used": 112,
+        "available": 140,
+        "percent": 80.0
+      },
+      "dsps": {
+        "used": 0,
+        "available": 220,
+        "percent": 0.0
+      },
+      "transactions": 28672
+    },
+    "candidate": {
+      "setup": {
+        "worst_slack_ns": 1.48,
+        "total_negative_slack_ns": 0.0,
+        "failing_endpoints": 0,
+        "total_endpoints": 17072
+      },
+      "hold": {
+        "worst_slack_ns": 0.02,
+        "total_negative_slack_ns": 0.0,
+        "failing_endpoints": 0,
+        "total_endpoints": 17072
+      },
+      "pulse_slack": 3.5,
+      "drc_warnings": 337,
+      "slices": {
+        "used": 2259,
+        "available": 13300,
+        "percent": 16.98
+      },
+      "luts": {
+        "used": 5372,
+        "available": 53200,
+        "percent": 10.1
+      },
+      "ram": {
+        "used": 112,
+        "available": 140,
+        "percent": 80.0
+      },
+      "dsps": {
+        "used": 112,
+        "available": 220,
+        "percent": 50.91
+      },
+      "transactions": 28672
+    },
+    "dsp_pipelining_warnings": {
+      "DPIP-1": 224,
+      "DPOP-2": 112
+    }
+  }
+]

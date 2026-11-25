@@ -1,0 +1,13 @@
+{
+  "provider": "ElevenLabs",
+  "model": "Eleven v4",
+  "voice": "Jarnathan - Confident and Versatile",
+  "stability": 0.62,
+  "similarity": 0.75,
+  "clone_strength": 0,
+  "selection": "User-selected existing voice/settings; first take from one generation of the new walkthrough. Original opening voice reused from v3.",
+  "download": "ElevenLabs_2026-11-17T09_29_36_Jarnathan - Confident and Versatile_pvc_s62_sim75_v4.mp3",
+  "script": "new-narration-tts.txt",
+  "take_sha256": "d21208cd9b5f96c50fdc702ba9217e5b8c20f9f4579262d09657da4184949fe0",
+  "raw_ASR": "work/demo-video-v5/audio/words.json"
+}

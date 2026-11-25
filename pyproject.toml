@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "timinglens"
+version = "1.0.0"
+description = "Deterministic FPGA timing diagnosis and RTL correlation for Vivado"
+requires-python = ">=3.11"
+dependencies = ["pydantic==2.12.5", "pyslang==9.1.0"]
+
+[project.optional-dependencies]
+gui = ["PySide6==6.10.1", "yowasp-yosys==0.69.0.0.post1233"]
+formal = ["yowasp-yosys==0.69.0.0.post1233"]
+test = ["pytest==8.4.2"]
+
+[project.scripts]
+timinglens = "timinglens.cli:main"
+
+[tool.setuptools.package-data]
+"timinglens.vivado" = ["*.tcl"]
+"timinglens.experiments" = ["*.tcl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = ["vivado: requires AMD Vivado and its Zynq-7000 device support"]
+
+[tool.setuptools.data-files]
+"share/timinglens/examples/deep" = ["examples/deep/design.sv", "examples/deep/timing.xdc", "examples/deep/tb.sv"]
+"share/timinglens/examples/priority" = ["examples/priority/design.sv", "examples/priority/timing.xdc", "examples/priority/tb.sv"]
+"share/timinglens/examples/fanout" = ["examples/fanout/design.sv", "examples/fanout/timing.xdc", "examples/fanout/tb.sv"]
+"share/timinglens/examples/clean" = ["examples/clean/design.sv", "examples/clean/timing.xdc"]
+"share/timinglens/examples/counter32" = ["examples/counter32/design.sv", "examples/counter32/timing.xdc", "examples/counter32/tb.sv"]
+"share/timinglens/examples/counter32_250" = ["examples/counter32_250/design.sv", "examples/counter32_250/timing.xdc", "examples/counter32_250/tb.sv"]
+"share/timinglens/examples/counter64" = ["examples/counter64/design.sv", "examples/counter64/timing.xdc", "examples/counter64/tb.sv"]
+"share/timinglens/examples/dense-suite" = ["examples/dense-suite/README.md", "examples/dense-suite/create.tcl", "examples/dense-suite/stream.v", "examples/dense-suite/check_stream.py", "examples/dense-suite/check_stream.sv"]
+"share/timinglens/examples/dense-suite/iq_power" = ["examples/dense-suite/iq_power/*.v"]
+"share/timinglens/examples/dense-suite/tone_curve" = ["examples/dense-suite/tone_curve/*.v"]
+"share/timinglens/examples/dense-suite/pixel_gain" = ["examples/dense-suite/pixel_gain/*.v", "examples/dense-suite/pixel_gain/ip.tcl"]
+"share/timinglens/examples/dense-zybo" = ["examples/dense-zybo/timing.xdc"]
+"share/timinglens/examples/resource-balance" = ["examples/resource-balance/*.v", "examples/resource-balance/create.tcl", "examples/resource-balance/README.md"]

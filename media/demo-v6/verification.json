@@ -1,0 +1,19 @@
+{
+  "movie_sha256": "421b12adb8b086e0c573ebc9dbb5c7377bffa0bba253c5d46e74ee7245b0ad01",
+  "frames_decoded": 3195,
+  "duration_s": 106.5,
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "encoded_audio_lufs": "-16.01",
+  "encoded_audio_peak_dbtp": "-3.55",
+  "aac_matches_reviewed_mix": true,
+  "chapters": 7,
+  "music": {
+    "quietest_interior_second_dbfs": -47.19679210213417,
+    "source_offset_seconds": 9.795916666666667,
+    "duration_seconds": 106.5
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "scope": "10289 finite baseline/candidate/oracle cycles; not formal equivalence",
+  "build": {
+    "command": [
+      "/usr/bin/nice",
+      "-n",
+      "10",
+      "/usr/bin/verilator",
+      "--binary",
+      "--timing",
+      "-Wno-WIDTHEXPAND",
+      "-j",
+      "2",
+      "--top-module",
+      "tb",
+      "--Mdir",
+      "obj",
+      "before.sv",
+      "after.sv",
+      "tb.sv"
+    ],
+    "returncode": 0,
+    "seconds": 10.275,
+    "log": "build.log"
+  },
+  "run": {
+    "command": [
+      "/usr/bin/nice",
+      "-n",
+      "10",
+      "/home/rl/workspace/TimingLens/work/demo-video-v5/runs/counter32_250-20261117T092729Z-b24fadcc/simulation/obj/Vtb"
+    ],
+    "returncode": 0,
+    "seconds": 0.008,
+    "log": "simulation.log"
+  },
+  "source_hashes": {
+    "baseline/design.sv": "e24003f3a011fa85a442d27dd7433e66cd8a23e83fe519ccf2e24ad7d8ba32ea",
+    "candidate/design.sv": "f3c1c0096100945bcb74c3751c04684f19b071a7c64181f1b62cea6eaa62e125",
+    "simulation/before.sv": "ec79ec6756fa55e16aa1a628ed70b4f0f70294698c51d0d9da3fe92970e3363c",
+    "simulation/after.sv": "dad3771533ccfbe302eee938ba0d632af7993b0ec8e1ff2d9271607c3c2a2c48",
+    "simulation/tb.sv": "38b03bd7f55ca5c36b016ced310e84a96fa13f02032001ffbfce774d9fc1da69"
+  },
+  "versions": {
+    "vivado": "2024.2",
+    "verilator": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)"
+  }
+}

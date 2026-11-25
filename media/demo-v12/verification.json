@@ -1,0 +1,18 @@
+{
+  "duration_seconds": 166.0,
+  "recap_starts": 146.7,
+  "identical_prefix_frames": 4401,
+  "total_frames": 4980,
+  "original_and_revised_wns_ns": [
+    -0.633,
+    0.407
+  ],
+  "original_and_revised_failing_endpoints": [
+    32,
+    0
+  ],
+  "audio_sha256": "df403d2eddfbdb7ce18b0b7d032df0ac98a47e77c9666fa0fde0b4ea57143ea3",
+  "encoded_lufs": "-16.03",
+  "encoded_true_peak_dbtp": "-2.89",
+  "sha256": "830e433af14767612bf69889b588ad9712d323ca4d3864c4b13ba81cef246d7d"
+}
